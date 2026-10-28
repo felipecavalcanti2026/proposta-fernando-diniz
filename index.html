@@ -379,6 +379,48 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   .rv,.line-mask>span,.funnel .box{opacity:1!important;transform:none!important;filter:none!important}
   .funnel path.flow{stroke-dashoffset:0!important}
 }
+
+/* protocolo: abas + selo */
+html.leaving body{opacity:0;transform:translateY(-8px);filter:blur(6px)}
+body{transition:opacity .42s var(--ease),transform .42s var(--ease),filter .42s var(--ease);animation:pagein 1s var(--ease)}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+.brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
+.brand small{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tabs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(0,0,0,.38);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.tabs a{padding:9px 20px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;
+  white-space:nowrap;transition:color .4s var(--ease),background .5s var(--ease)}
+.tabs a:hover{color:var(--cream)}
+.tabs a.on{background:var(--gold);color:var(--ink)}
+@media (max-width:760px){
+  .nav-cta{display:none}
+  .tabs{position:static;transform:none}
+  .tabs a{padding:8px 12px;font-size:10.5px;letter-spacing:.14em}
+  .brand{font-size:16px}
+  .brand small{font-size:8.5px;letter-spacing:.28em}
+}
+
+.doors{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;margin-top:72px}
+.door{position:relative;padding:40px 36px 38px;border-radius:20px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);
+  text-decoration:none;color:inherit;display:block;transition:border-color .6s,transform .6s var(--ease)}
+a.door:hover{border-color:var(--gold);transform:translateY(-5px)}
+.door small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.door h3{font-size:clamp(30px,3vw,40px);color:var(--cream);margin:14px 0 6px}
+.door .say{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-2);margin-bottom:16px}
+.door p{color:var(--muted);font-size:16px}
+.door .meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;letter-spacing:.06em;color:var(--text);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.door .here{color:var(--gold-2)}
+.door .go{color:var(--gold-2);font-weight:600}
+.seal{width:170px;height:170px}
+.seal text{font:600 9.6px var(--sans);letter-spacing:.3em;fill:var(--gold)}
+.seal .ring{transform-origin:100px 100px;animation:seal 38s linear infinite}
+.seal circle{fill:none;stroke:var(--gold-2);stroke-width:1}
+.seal .c2{stroke:var(--gold)}
+@keyframes seal{to{transform:rotate(360deg)}}
+@media (max-width:980px){
+  .doors{grid-template-columns:1fr}
+  .seal{justify-self:center;order:-1;width:140px;height:140px}
+}
 </style>
 </head>
 <body>
@@ -386,7 +428,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
 <div class="glow" id="glow"></div>
 
 <header class="nav" id="nav">
-  <div class="brand">Mulher <i>Magnética</i></div>
+  <a class="brand" href="./"><small>Protocolo</small>Os bons <i>se encontram</i></a>
+  <nav class="tabs" aria-label="Produtos do protocolo"><a href="./" class="on" aria-current="page">Para ela</a><a href="ele.html">Para ele</a></nav>
   <a class="nav-cta" href="#publico">Para quem é</a>
 </header>
 
@@ -756,6 +799,52 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   </div>
 </section>
 
+<!-- PROTOCOLO -->
+<section class="pad" id="protocolo" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="eyebrow rv">14 · O protocolo</div>
+    <h2 class="rv d1">Os bons se encontram: <em>um protocolo, duas portas</em></h2>
+    <p class="lead rv d2">Fernando, enquanto organizava o seu método, desenhei também o produto do outro lado: um método para homens, que eu chamei de O Último Homem. Quando coloquei os dois lado a lado, ficou claro que eles contam a mesma história de lados opostos da mesa. Por isso o conjunto ganha um nome só, Protocolo Os Bons Se Encontram. A tese é uma: relação boa começa quando as duas pessoas param de representar e passam a escolher com critério. Mas cada lado compra o seu produto, na sua VSL e no seu checkout.</p>
+    <div class="doors">
+      <div class="door rv d1">
+        <small>Para ela</small>
+        <h3>Método Mulher Magnética</h3>
+        <div class="say">Ela aprende a ler.</div>
+        <p>Os 13 códigos para identificar intenção, padrão e risco antes de se envolver. Ela para de tentar ser escolhida e passa a escolher quem fica.</p>
+        <div class="meta"><span>VSL própria · R$297 na Nasten</span><span class="here">Você está nesta aba</span></div></div>
+      <svg class="seal rv d2" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="sealring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <g class="ring"><text><textPath href="#sealring" textLength="498" lengthAdjust="spacing">PROTOCOLO · OS BONS SE ENCONTRAM · PROTOCOLO · OS BONS SE ENCONTRAM ·</textPath></text></g>
+        <circle cx="88" cy="100" r="24"/><circle class="c2" cx="112" cy="100" r="24"/>
+      </svg>
+      <a class="door rv d3" href="ele.html">
+        <small>Para ele</small>
+        <h3>O Último Homem</h3>
+        <div class="say">Ele aprende a ser lido.</div>
+        <p>Presença, conversa, leitura de reciprocidade e critério para escolher. Ele para de implorar aprovação e passa a se apresentar como o homem que quer ser.</p>
+        <div class="meta"><span>VSL própria · R$297 na Nasten</span><span class="go">Ver o lado dele →</span></div></a>
+    </div>
+
+    <h3 class="sub-h rv">Por que eu vendo os dois <em>separados</em></h3>
+    <div class="profiles">
+      <div class="profile rv d1"><small>Motivo 1</small><h3>Cada dor pede uma conversa</h3><p>Ela chega com medo de errar de novo. Ele chega se sentindo invisível ou cansado de carregar a relação sozinho. Um vídeo que tentasse falar com os dois ao mesmo tempo não falaria direito com nenhum.</p></div>
+      <div class="profile rv d2"><small>Motivo 2</small><h3>A confiança de cada lado</h3><p>A mulher que compra para se proteger não pode sentir que está no mesmo carrinho de um curso masculino de atração, e o homem não quer comprar numa página feita para mulheres. Cada produto tem a sua página, a sua área de membros e o seu grupo. Nenhum checkout oferece o produto do outro lado.</p></div>
+      <div class="profile rv d3"><small>Motivo 3</small><h3>Números que não se misturam</h3><p>Rodo uma campanha para cada público no Meta, cada uma com o seu evento de compra. Assim eu sei quanto custa cada venda de cada lado, e o resultado de um produto nunca esconde o problema do outro.</p></div>
+    </div>
+
+    <h3 class="sub-h rv">O que os dois lados <em>compartilham</em></h3>
+    <ul class="wants">
+      <li class="rv"><span><b>Você.</b> O mesmo rosto e a mesma voz nas duas VSLs. A sua profissão de ler gente sustenta os dois produtos.</span></li>
+      <li class="rv d1"><span><b>A mesma frase.</b> As duas VSLs terminam em "Que os bons se encontrem". É a assinatura do protocolo.</span></li>
+      <li class="rv"><span><b>O mesmo vocabulário.</b> Critério, reciprocidade, clareza e escolha, dos dois lados.</span></li>
+      <li class="rv d1"><span><b>A mesma regra.</b> Nenhum dos dois promete controlar a vontade de outra pessoa.</span></li>
+      <li class="rv"><span><b>A mesma estrutura de funil.</b> VSL de 15 a 20 minutos, R$297, dois bumps e um acompanhamento em grupo como upsell.</span></li>
+      <li class="rv d1"><span><b>O mesmo selo.</b> O protocolo assina as duas páginas, e cada produto mantém o próprio nome e a própria cor.</span></li>
+    </ul>
+    <p class="punch dark-punch rv">Do lado dela, você ensina a reconhecer o homem que não vale a pena. Do lado dele, ensina a ser <b>o homem que passa nesse teste</b>. É assim que os bons se encontram.</p>
+  </div>
+</section>
+
 <!-- 12 FECHAMENTO -->
 <section class="close" id="proximo">
   <div class="close-copy">
@@ -769,7 +858,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   <div class="close-media"><img src="img/hero.jpg" alt="Fernando Diniz" data-par="0.06"></div>
 </section>
 
-<footer><span>Felipe Cavalcanti · Outubro 2026</span><span>Preparado para Fernando Diniz</span></footer>
+<footer><span>Felipe Cavalcanti · Outubro 2026</span><span>Protocolo Os Bons Se Encontram · Preparado para Fernando Diniz</span></footer>
 
 <script>
 (function(){
@@ -824,6 +913,17 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   }
   if (lenis) lenis.on('scroll', onScroll); else addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+
+  // abas do protocolo: saída suave entre as páginas
+  document.querySelectorAll('.tabs a:not(.on), a.door[href]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (e.metaKey || e.ctrlKey || e.shiftKey || reduce) return;
+      e.preventDefault(); document.documentElement.classList.add('leaving');
+      setTimeout(function(){ location.href = a.href; }, 400);
+    });
+  });
+  addEventListener('pageshow', function(){ document.documentElement.classList.remove('leaving'); });
 
   // cursor glow + bump spotlight
   var glow = document.getElementById('glow');

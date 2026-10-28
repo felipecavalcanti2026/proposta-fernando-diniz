@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>O Último Homem</title>
+<meta name="description" content="O Último Homem, o produto masculino do Protocolo Os Bons Se Encontram, preparado para Fernando Diniz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+:root{
+  --ink:#0b0c0e; --ink-2:#121417; --ink-3:#1b1e22; --line:rgba(185,192,200,.18);
+  --cream:#eef0f2; --cream-2:#e1e4e8; --paper:#f8f9fa;
+  --gold:#b9c0c8; --gold-2:#e4e8ec; --gold-deep:#5d6670; --bronze:#3a4047;
+  --text:#e6e9ec; --muted:#8f969e; --muted-dark:#5a6169; --text-dark:#15181b;
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Manrope", system-ui, sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--ink);color:var(--text);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.65;letter-spacing:.005em;overflow-x:hidden}
+img{display:block;max-width:100%}
+::selection{background:var(--gold);color:var(--ink)}
+
+/* film grain */
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:100;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation:grain 8s steps(10) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}}
+
+/* progress + cursor glow */
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);z-index:90;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-2),var(--gold))}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:1;left:0;top:0;
+  background:radial-gradient(circle,rgba(185,192,200,.09),transparent 65%);transform:translate(-50%,-50%);transition:opacity .4s;opacity:0}
+@media (hover:hover){.glow{opacity:1}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;
+  padding:22px clamp(16px,5vw,64px);transition:background .5s var(--ease),padding .5s var(--ease),backdrop-filter .5s}
+@media (max-width:760px){.nav:not(.solid){background:linear-gradient(rgba(11,12,14,.75),transparent)}}
+.nav.solid{background:rgba(11,12,14,.72);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px);padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--serif);font-size:20px;letter-spacing:.02em;color:var(--cream)}
+.brand i{color:var(--gold)}
+.nav-cta{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2);text-decoration:none;
+  border:1px solid rgba(185,192,200,.4);padding:10px 18px;border-radius:999px;background:rgba(11,12,14,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:all .4s var(--ease)}
+.nav-cta:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+/* layout */
+section{position:relative;z-index:2}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,5vw,64px)}
+.pad{padding:clamp(96px,14vw,168px) 0}
+.light{background:var(--cream);color:var(--text-dark)}
+.light .eyebrow{color:var(--gold-deep)}
+.light p.lead,.light .muted{color:var(--muted-dark)}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:26px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;line-height:1.02}
+h1,h2,h3,.price .num,.bump-top b,.step .t,.stat b,.big .n,.week .w{font-variant-numeric:lining-nums}
+h2{font-size:clamp(40px,6vw,78px);max-width:21ch}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--gold)}
+.light h2 em{color:var(--gold-deep)}
+p.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:56ch;font-weight:300;margin-top:26px}
+.gold-text{background:linear-gradient(100deg,var(--gold-deep) 0%,var(--gold-2) 40%,#ffffff 50%,var(--gold-2) 60%,var(--gold-deep) 100%);
+  background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s var(--ease) infinite}
+@keyframes shine{0%{background-position:100% 0}60%,100%{background-position:-50% 0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);filter:blur(8px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease),filter 1.2s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}.rv.d5{transition-delay:.5s}
+.line-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.line-mask>span{display:block;transform:translateY(105%);transition:transform 1.4s var(--ease)}
+.in .line-mask>span,.line-mask.in>span{transform:none}
+.line-mask:nth-child(2)>span{transition-delay:.12s}.line-mask:nth-child(3)>span{transition-delay:.24s}
+
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:var(--ink)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:140px clamp(16px,5vw,64px) 80px;position:relative;z-index:2}
+.hero h1{font-size:clamp(54px,7.4vw,112px);color:var(--cream);margin-bottom:34px}
+.hero .rule{width:64px;height:1px;background:var(--gold);margin-bottom:30px;transform-origin:0;transform:scaleX(0);transition:transform 1.4s var(--ease) .6s}
+.hero.in .rule{transform:scaleX(1)}
+.hero p.lead{margin-top:0}
+.hero-meta{margin-top:56px;font-size:13px;color:var(--muted);letter-spacing:.06em}
+.hero-media{position:relative;overflow:hidden}
+.hero-media img{position:absolute;inset:-6% 0;width:100%;height:112%;object-fit:cover;object-position:50% 30%;transform:scale(1.12);transition:transform 2.6s var(--ease);will-change:transform}
+.hero.in .hero-media img{transform:scale(1)}
+.hero-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--ink) 0%,rgba(11,12,14,.55) 22%,transparent 55%),linear-gradient(0deg,var(--ink) 0%,transparent 30%)}
+.scroll-hint{position:absolute;left:clamp(16px,5vw,64px);bottom:34px;z-index:3;display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint span{width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:drip 2.4s var(--ease) infinite;transform-origin:top}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* cards */
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:64px}
+.card{position:relative;background:var(--paper);border:1px solid rgba(93,102,112,.18);border-radius:18px;padding:34px 28px 38px;overflow:hidden;
+  transition:transform .7s var(--ease),box-shadow .7s var(--ease),border-color .7s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-2));transform:scaleX(.25);transform-origin:0;transition:transform .9s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(20,24,28,.35);border-color:rgba(93,102,112,.4)}
+.card:hover::before{transform:scaleX(1)}
+.card svg{width:34px;height:34px;stroke:var(--gold-deep);margin-bottom:26px}
+.card h3{font-family:var(--sans);font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:12px;line-height:1.25}
+.card p{font-size:15.5px;color:var(--muted-dark);line-height:1.6}
+.punch{margin-top:56px;font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.3;max-width:34ch}
+.punch b{font-weight:600;color:var(--gold-deep);font-style:italic}
+
+/* big idea */
+.idea{display:grid;grid-template-columns:1.05fr 1fr;min-height:100svh;background:linear-gradient(135deg,#d5dadf,#aeb5bd 60%,#8b939c);color:#0b0c0e;overflow:hidden}
+.idea-copy{display:flex;flex-direction:column;justify-content:center;padding:120px clamp(16px,5vw,64px)}
+.idea .eyebrow{color:#2a2e33}
+.idea h2{font-size:clamp(58px,8.4vw,128px);max-width:9ch;line-height:.95}
+.idea h2 em{color:#0b0c0e}
+.idea .rule{width:64px;height:1px;background:#0b0c0e;margin:36px 0 28px}
+.idea p{font-size:clamp(18px,1.7vw,21px);max-width:40ch;color:#1d2024;font-weight:400}
+.idea-media{position:relative;overflow:hidden}
+.idea-media img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;object-position:50% 20%;will-change:transform}
+
+/* offer */
+.offer-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;margin-top:64px;align-items:stretch}
+.stack{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.stack-row{display:flex;justify-content:space-between;gap:20px;padding:22px 28px;border-bottom:1px solid var(--line);font-size:16.5px;transition:background .5s}
+.stack-row:hover{background:rgba(185,192,200,.05)}
+.stack-row span:last-child{font-variant-numeric:tabular-nums;color:var(--gold-2);white-space:nowrap}
+.stack-row.head{font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.stack-row.head span:last-child{color:var(--muted)}
+.stack-row.total{border-bottom:0;background:rgba(185,192,200,.08);font-weight:700}
+.stack-row.total span:last-child{color:var(--cream);text-decoration:line-through;text-decoration-color:var(--gold);text-decoration-thickness:1px}
+.price{position:relative;border-radius:20px;padding:44px 40px;background:radial-gradient(120% 90% at 100% 0%,rgba(185,192,200,.18),transparent 55%),var(--ink-2);
+  border:1px solid rgba(185,192,200,.45);display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.price::after{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--gold-2) 85%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;pointer-events:none}
+@property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+.price small{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.price .num{font-family:var(--serif);font-size:clamp(84px,9vw,124px);font-weight:500;line-height:1;margin:14px 0 10px;color:var(--cream)}
+.price .num sup{font-size:.36em;vertical-align:.95em;margin-right:6px;color:var(--gold)}
+.price .sub{color:var(--muted);font-size:16px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.price p{font-size:15px;color:var(--muted)}
+
+/* timeline */
+.timeline{margin-top:72px;position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{position:relative;padding:28px 26px 30px;border-radius:16px;background:var(--paper);border:1px solid rgba(93,102,112,.16);transition:transform .6s var(--ease),background .6s,box-shadow .6s}
+.step:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(20,24,28,.35)}
+.step .t{font-family:var(--sans);font-size:22px;font-weight:700;letter-spacing:-.01em;color:var(--gold-deep);line-height:1;font-variant-numeric:tabular-nums}
+.step h4{font-size:17px;font-weight:700;margin:12px 0 6px;letter-spacing:-.01em}
+.step p{font-size:15px;color:var(--muted-dark)}
+.step.key{background:var(--ink);border-color:var(--gold);color:var(--cream)}
+.step.key .t{color:var(--gold)}
+.step.key p{color:var(--muted)}
+.step.key::after{content:"Botão de compra";position:absolute;top:22px;right:22px;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:5px 10px;border-radius:999px}
+
+/* bumps */
+.bumps{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:64px}
+.bump{position:relative;padding:40px 38px;border-radius:20px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);overflow:hidden;transition:border-color .6s,transform .6s var(--ease)}
+.bump:hover{border-color:rgba(185,192,200,.5);transform:translateY(-4px)}
+.bump::before{content:"";position:absolute;inset:0;background:radial-gradient(500px circle at var(--mx,50%) var(--my,0%),rgba(185,192,200,.1),transparent 45%);opacity:0;transition:opacity .5s;pointer-events:none}
+.bump:hover::before{opacity:1}
+.bump-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px}
+.bump-top small{font-size:12px;font-weight:600;letter-spacing:.3em;color:var(--gold)}
+.bump-top b{font-family:var(--serif);font-size:40px;font-weight:600;color:var(--cream)}
+.bump h3{font-size:clamp(32px,3.2vw,42px);color:var(--cream);margin-bottom:18px}
+.bump p{color:var(--muted);font-size:16px}
+.bump .why{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--text)}
+.bump .why b{color:var(--gold-2);font-weight:600}
+
+/* upsell */
+.upsell{display:grid;grid-template-columns:.85fr 1.15fr;background:var(--cream);color:var(--text-dark);overflow:hidden}
+.upsell-media{position:relative;min-height:640px;overflow:hidden}
+.upsell-media img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;object-position:50% 25%;will-change:transform}
+.upsell-copy{padding:clamp(96px,12vw,150px) clamp(16px,5vw,72px)}
+.upsell h2{max-width:14ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:48px 0 36px}
+.stat{padding:24px 22px;border-radius:16px;background:var(--paper);border:1px solid rgba(93,102,112,.18)}
+.stat b{display:block;font-family:var(--serif);font-size:44px;font-weight:600;line-height:1;margin-bottom:8px}
+.stat>span{font-size:14px;color:var(--muted-dark)}
+.stat.dark{background:var(--ink);border-color:var(--gold);color:var(--cream)}
+.stat.dark b{color:var(--gold-2)}.stat.dark>span{color:var(--muted)}
+.checks{list-style:none;display:grid;gap:14px}
+.checks li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px}
+.checks li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;border:1px solid var(--gold-deep);
+  background:radial-gradient(circle,var(--gold-deep) 0 3px,transparent 3.5px)}
+.downsell{margin-top:40px;padding:22px 26px;border-radius:14px;background:var(--cream-2);border-left:2px solid var(--gold-deep);font-size:16px}
+
+/* funnel */
+.funnel{margin-top:80px;position:relative}
+.funnel svg{width:100%;height:auto;overflow:visible}
+.funnel .box rect{fill:var(--ink-3);stroke:rgba(185,192,200,.25);stroke-width:1}
+.funnel .box.hl rect{fill:#262a2f;stroke:var(--gold);stroke-width:1.5}
+.funnel .box.dash rect{stroke:var(--gold);stroke-dasharray:5 5;fill:var(--ink-2)}
+.funnel .tt{font:700 19px var(--sans);fill:var(--cream);text-anchor:middle}
+.funnel .ts{font:400 14.5px var(--sans);fill:var(--muted);text-anchor:middle}
+.funnel .lbl{font:500 13.5px var(--sans);fill:var(--muted)}
+.funnel .lbl.g{fill:var(--gold)}
+.funnel path.flow{fill:none;stroke:var(--gold-deep);stroke-width:1.4;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 1.4s var(--ease)}
+.funnel path.flow.dashed{stroke:var(--gold)}
+.funnel.in path.flow{stroke-dashoffset:0}
+.funnel .box{opacity:0;transform:translateY(12px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.funnel.in .box{opacity:1;transform:none}
+.funnel .pulse{fill:var(--gold-2);filter:drop-shadow(0 0 6px var(--gold))}
+.funnel-mobile{display:none}
+
+/* ticket */
+.ticket{display:grid;grid-template-columns:.9fr 1.5fr;gap:28px;margin-top:64px;align-items:stretch}
+.big{border-radius:20px;background:var(--ink);color:var(--cream);padding:48px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.big::before{content:"";position:absolute;width:380px;height:380px;right:-140px;top:-140px;border-radius:50%;border:1px solid rgba(185,192,200,.25)}
+.big::after{content:"";position:absolute;width:240px;height:240px;right:-70px;top:-70px;border-radius:50%;border:1px solid rgba(185,192,200,.15)}
+.big .n{font-family:var(--serif);font-size:clamp(96px,11vw,150px);font-weight:500;line-height:.9;margin-bottom:20px}
+.big p{color:var(--muted);font-size:16.5px;max-width:28ch}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tbl{border-radius:20px;overflow:hidden;border:1px solid rgba(93,102,112,.22);background:var(--paper)}
+.tbl th,.tbl td{padding:17px 20px;text-align:right;border-bottom:1px solid rgba(93,102,112,.14);font-size:16px}
+.tbl th{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-dark);background:var(--cream-2)}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl tr:last-child td{border-bottom:0;background:var(--cream-2);font-weight:700;font-size:18px}
+.tbl tbody tr{transition:background .4s}
+.tbl tbody tr:hover{background:#eceef1}
+.note{margin-top:28px;font-size:13.5px;color:var(--muted-dark)}
+
+/* traffic */
+.traffic{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:64px}
+.phase{position:relative;padding:4px 0 4px 30px;margin-bottom:44px}
+.phase::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--line)}
+.phase::after{content:"";position:absolute;left:0;top:0;width:1px;height:0;background:var(--gold);transition:height 1.4s var(--ease)}
+.phase.in::after{height:100%}
+.phase small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.phase h3{font-family:var(--sans);font-size:21px;font-weight:700;margin:8px 0 8px;color:var(--cream)}
+.phase p{color:var(--muted);font-size:16px}
+.metrics{border:1px solid var(--line);border-radius:20px;overflow:hidden;align-self:start}
+.metrics td,.metrics th{padding:19px 24px;border-bottom:1px solid var(--line);font-size:16px;text-align:left}
+.metrics th{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.metrics td:last-child,.metrics th:last-child{text-align:right;color:var(--gold-2)}
+.metrics tr:last-child td{border-bottom:0;background:rgba(185,192,200,.08);font-weight:700;color:var(--cream)}
+.metrics tr:last-child td:last-child{color:var(--gold-2)}
+.metrics-note{margin-top:18px;font-size:14px;color:var(--muted)}
+
+/* next */
+.weeks{display:grid;grid-template-columns:repeat(3,1fr) 1.4fr;gap:16px;margin-top:64px}
+.week{padding:32px 26px;border-radius:18px;background:var(--paper);border:1px solid rgba(93,102,112,.16);min-height:300px;position:relative;overflow:hidden}
+.week small{font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--gold-deep)}
+.week .w{font-family:var(--serif);font-size:96px;line-height:.8;position:absolute;right:16px;bottom:8px;color:rgba(93,102,112,.12);font-weight:600}
+.week p{margin-top:16px;font-size:16.5px;position:relative}
+.week.dark{background:var(--ink);border-color:var(--gold);color:var(--cream)}
+.week.dark small{color:var(--gold)}.week.dark .w{color:rgba(185,192,200,.14)}
+.needs{padding:32px 30px;border-radius:18px;background:var(--cream-2)}
+.needs h3{font-family:var(--sans);font-size:19px;font-weight:700;margin-bottom:20px}
+.needs .checks li{font-size:15.5px}
+
+/* close */
+.close{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
+.close-copy{display:flex;flex-direction:column;justify-content:center;padding:120px clamp(16px,5vw,64px)}
+.close h2{font-size:clamp(52px,6.6vw,104px);font-style:italic;font-weight:400;max-width:none;line-height:1.02}
+.close h2 .line-mask>span{white-space:nowrap}
+.close .rule{width:64px;height:1px;background:var(--gold);margin:38px 0 28px}
+.close p{color:var(--muted);font-size:clamp(17px,1.6vw,20px);max-width:36ch}
+.btn{margin-top:44px;align-self:flex-start;display:inline-flex;align-items:center;gap:14px;padding:18px 30px;border-radius:999px;
+  background:var(--gold);color:var(--ink);text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+  position:relative;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s}
+.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform 1s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px -16px rgba(185,192,200,.7)}
+.btn:hover::before{transform:translateX(120%)}
+.btn svg{width:16px;height:16px;transition:transform .5s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.close-media{position:relative;overflow:hidden}
+.close-media img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;object-position:50% 30%;will-change:transform}
+.close-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--ink),transparent 45%)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px clamp(16px,5vw,64px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+
+/* responsive */
+@media (max-width:980px){
+  .grid-4{grid-template-columns:1fr 1fr}
+  .offer-grid,.ticket,.traffic,.bumps{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr 1fr}
+  .weeks{grid-template-columns:1fr 1fr 1fr}
+  .needs{grid-column:1/-1}
+  .upsell{grid-template-columns:1fr}
+  .upsell-media{min-height:520px}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .hero,.idea,.close{grid-template-columns:1fr;min-height:auto}
+  .hero-media,.close-media{height:62svh;order:-1}
+  .hero-media::before{background:linear-gradient(0deg,var(--ink) 2%,transparent 45%)}
+  .close-media::before{background:linear-gradient(0deg,var(--ink) 2%,transparent 45%)}
+  .hero-copy{padding-top:12px;padding-bottom:72px}
+  .scroll-hint{display:none}
+  .idea-media{height:70svh}
+  .idea-copy{padding-top:88px;padding-bottom:72px}
+  .close-copy{padding-top:24px}
+  .grid-4,.timeline,.weeks,.stats{grid-template-columns:1fr}
+  .week{min-height:auto}
+  .stack-row{padding:18px 20px;font-size:15.5px}
+  .price{padding:36px 28px}
+  .bump{padding:32px 26px}
+  .tbl th,.tbl td{padding:14px 10px;font-size:14px}
+  .tbl th{font-size:9.5px;letter-spacing:.12em}
+  .funnel svg{display:none}
+  .funnel-mobile{display:grid;gap:10px}
+  .fm{padding:18px 22px;border-radius:14px;background:var(--ink-3);border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .fm b{color:var(--cream);font-size:16px}.fm span{color:var(--muted);font-size:14px;text-align:right}
+  .fm.hl{border-color:var(--gold)}
+  .fm.sub{margin-left:22px;border-style:dashed;border-color:rgba(185,192,200,.5)}
+  .fm-arrow{text-align:center;color:var(--gold-deep);font-size:14px;line-height:1}
+  .upsell-media{min-height:0;height:70svh}
+}
+
+/* público */
+.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+.profile{position:relative;padding:36px 30px 38px;border-radius:18px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);transition:border-color .6s,transform .6s var(--ease)}
+.profile:hover{border-color:rgba(185,192,200,.5);transform:translateY(-4px)}
+.profile small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.profile h3{font-size:clamp(28px,2.6vw,34px);color:var(--cream);margin:14px 0 16px;line-height:1.08}
+.profile p{color:var(--muted);font-size:16px}
+.sub-h{font-family:var(--serif);font-size:clamp(30px,3.4vw,44px);font-weight:500;line-height:1.1;margin-top:110px;max-width:22ch}
+.sub-h em{font-style:italic;color:var(--gold)}
+.light .sub-h em{color:var(--gold-deep)}
+.scene{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px;position:relative}
+.scene::before{content:"";position:absolute;left:0;right:0;top:21px;height:1px;background:var(--line)}
+.scene-step{position:relative}
+.scene-step .dot{width:43px;height:43px;border-radius:50%;border:1px solid var(--gold);background:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-size:20px;color:var(--gold-2);margin-bottom:22px;position:relative;font-variant-numeric:lining-nums}
+.scene-step h4{font-size:17px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.scene-step p{font-size:15.5px;color:var(--muted)}
+.wants{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin-top:40px;list-style:none;max-width:900px}
+.wants li{display:flex;gap:14px;font-size:17px;color:var(--text);padding:18px 0;border-bottom:1px solid var(--line)}
+.wants li b{color:var(--gold-2);font-weight:600}
+.wants li::before{content:"";flex:none;width:7px;height:7px;margin-top:10px;border-radius:50%;background:var(--gold)}
+.punch.dark-punch{color:var(--cream)}
+.punch.dark-punch b{color:var(--gold-2)}
+
+/* contraste */
+.vs{margin-top:64px;border-radius:20px;overflow:hidden;border:1px solid rgba(93,102,112,.22);background:var(--paper)}
+.vs-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(93,102,112,.14)}
+.vs-row:last-child{border-bottom:0}
+.vs-row>div{padding:22px 28px;font-size:16.5px}
+.vs-row>div:first-child{color:var(--muted-dark);text-decoration:line-through;text-decoration-color:rgba(93,102,112,.45);text-decoration-thickness:1px}
+.vs-row>div:last-child{border-left:1px solid rgba(93,102,112,.14);font-weight:600;color:var(--text-dark);background:rgba(185,192,200,.07)}
+.vs-row.head>div{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;background:var(--cream-2);color:var(--muted-dark)}
+.vs-row.head>div:last-child{color:var(--gold-deep)}
+
+/* antes e depois */
+.ba{margin-top:64px;display:grid;gap:14px}
+.ba-row{display:grid;grid-template-columns:1fr 56px 1fr;align-items:center;gap:0;border-radius:16px;background:var(--paper);border:1px solid rgba(93,102,112,.16);overflow:hidden;transition:box-shadow .6s,transform .6s var(--ease)}
+.ba-row:hover{transform:translateY(-3px);box-shadow:0 22px 44px -28px rgba(20,24,28,.35)}
+.ba-row>div{padding:22px 26px;font-size:16px}
+.ba-row .from{color:var(--muted-dark)}
+.ba-row .arrow{text-align:center;color:var(--gold-deep);font-size:20px}
+.ba-row .to{font-weight:600;background:rgba(185,192,200,.09);height:100%;display:flex;align-items:center}
+.ba-head{display:grid;grid-template-columns:1fr 56px 1fr;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-dark);padding:0 26px}
+.ba-head span:last-child{color:var(--gold-deep)}
+.tone{margin-top:56px;padding:40px 44px;border-radius:20px;background:var(--ink);color:var(--cream);display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start}
+.tone small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;white-space:nowrap;padding-top:8px}
+.tone p{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);line-height:1.35}
+.tone p em{color:var(--gold-2)}
+@media (max-width:980px){
+  .profiles{grid-template-columns:1fr}
+  .scene{grid-template-columns:1fr 1fr;row-gap:40px}
+  .scene::before{display:none}
+}
+@media (max-width:760px){
+  .scene,.wants{grid-template-columns:1fr}
+  .vs-row{grid-template-columns:1fr}
+  .vs-row>div:last-child{border-left:0;border-top:1px dashed rgba(93,102,112,.2)}
+  .vs-row.head{display:none}
+  .vs-row>div{padding:16px 20px}
+  .ba-head{display:none}
+  .ba-row{grid-template-columns:1fr}
+  .ba-row .arrow{display:none}
+  .ba-row .from{padding-bottom:10px}
+  .ba-row .to{padding-top:14px}
+  .tone{grid-template-columns:1fr;gap:16px;padding:32px 26px}
+  .sub-h{margin-top:80px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.line-mask>span,.funnel .box{opacity:1!important;transform:none!important;filter:none!important}
+  .funnel path.flow{stroke-dashoffset:0!important}
+}
+
+/* protocolo: abas + selo */
+html.leaving body{opacity:0;transform:translateY(-8px);filter:blur(6px)}
+body{transition:opacity .42s var(--ease),transform .42s var(--ease),filter .42s var(--ease);animation:pagein 1s var(--ease)}
+@keyframes pagein{from{opacity:0}to{opacity:1}}
+.brand{display:flex;flex-direction:column;line-height:1.05;text-decoration:none}
+.brand small{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tabs{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(0,0,0,.38);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.tabs a{padding:9px 20px;border-radius:999px;font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;
+  white-space:nowrap;transition:color .4s var(--ease),background .5s var(--ease)}
+.tabs a:hover{color:var(--cream)}
+.tabs a.on{background:var(--gold);color:var(--ink)}
+@media (max-width:760px){
+  .nav-cta{display:none}
+  .tabs{position:static;transform:none}
+  .tabs a{padding:8px 12px;font-size:10.5px;letter-spacing:.14em}
+  .brand{font-size:16px}
+  .brand small{font-size:8.5px;letter-spacing:.28em}
+}
+
+.doors{display:grid;grid-template-columns:1fr auto 1fr;gap:28px;align-items:center;margin-top:72px}
+.door{position:relative;padding:40px 36px 38px;border-radius:20px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);
+  text-decoration:none;color:inherit;display:block;transition:border-color .6s,transform .6s var(--ease)}
+a.door:hover{border-color:var(--gold);transform:translateY(-5px)}
+.door small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.door h3{font-size:clamp(30px,3vw,40px);color:var(--cream);margin:14px 0 6px}
+.door .say{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-2);margin-bottom:16px}
+.door p{color:var(--muted);font-size:16px}
+.door .meta{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;letter-spacing:.06em;color:var(--text);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.door .here{color:var(--gold-2)}
+.door .go{color:var(--gold-2);font-weight:600}
+.seal{width:170px;height:170px}
+.seal text{font:600 9.6px var(--sans);letter-spacing:.3em;fill:var(--gold)}
+.seal .ring{transform-origin:100px 100px;animation:seal 38s linear infinite}
+.seal circle{fill:none;stroke:var(--gold-2);stroke-width:1}
+.seal .c2{stroke:var(--gold)}
+@keyframes seal{to{transform:rotate(360deg)}}
+@media (max-width:980px){
+  .doors{grid-template-columns:1fr}
+  .seal{justify-self:center;order:-1;width:140px;height:140px}
+}
+
+/* O Último Homem: grotesca condensada + serifa itálica como assinatura do protocolo */
+:root{--display:"Archivo","Manrope",system-ui,sans-serif}
+h1,h2,h3{font-family:var(--display);font-weight:600;font-stretch:72%;letter-spacing:-.012em;line-height:.98}
+h1{text-transform:uppercase;letter-spacing:-.005em}
+.hero h1{font-size:clamp(68px,9.6vw,156px);line-height:.9;margin-bottom:22px}
+h2{max-width:20ch}
+h1 em,h2 em,.sub-h em,.door h3 em{font-family:var(--serif);font-style:italic;font-weight:400;font-stretch:normal;letter-spacing:0;text-transform:none}
+h2 em,.sub-h em{font-size:1.08em}
+.hero h1 em{font-size:1em;text-transform:none}
+.close h2{font-family:var(--serif);font-stretch:normal;letter-spacing:-.01em}
+.idea h2{font-size:clamp(54px,7.4vw,112px);max-width:11ch;line-height:.94}
+.card h3,.phase h3{font-family:var(--sans);font-stretch:normal}
+.profile h3{font-size:clamp(28px,2.4vw,34px);letter-spacing:-.005em}
+.tagline{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.2vw,30px);color:var(--gold-2);margin-bottom:30px}
+
+/* manifesto */
+.manifesto{margin-top:40px;max-width:900px;border-left:1px solid var(--line);padding-left:clamp(20px,4vw,48px)}
+.manifesto p{font-family:var(--serif);font-size:clamp(24px,2.6vw,34px);line-height:1.3;color:var(--muted);margin-bottom:18px}
+.manifesto p.last{color:var(--cream);margin-bottom:0}
+.manifesto em{color:var(--gold-2)}
+.stance{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:88px}
+.stance>div{padding:36px 34px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,var(--ink-3),var(--ink-2))}
+.stance small{display:block;font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:24px}
+.stance .checks li{color:var(--text);font-size:16px}
+.stance .checks li::before{border-color:var(--gold);background:radial-gradient(circle,var(--gold) 0 3px,transparent 3.5px)}
+.checks.no li::before{background:none;border-color:var(--muted);
+  background-image:linear-gradient(45deg,transparent 46%,var(--muted) 46% 54%,transparent 54%),linear-gradient(-45deg,transparent 46%,var(--muted) 46% 54%,transparent 54%)}
+.stance .checks.no li{color:var(--muted)}
+
+/* pilares e módulos */
+.profiles.four{grid-template-columns:repeat(4,1fr)}
+.profile .q{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.3;color:var(--gold-2);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.profiles.modules{grid-template-columns:repeat(3,1fr)}
+.profiles.modules .profile h3{font-size:clamp(26px,2.2vw,31px)}
+.scene.five{grid-template-columns:repeat(5,1fr);gap:24px}
+.scene-step .dot{font-family:var(--display);font-stretch:72%;font-weight:600}
+.price .num,.bump-top b,.stat b{font-family:var(--display);font-stretch:72%;font-weight:600}
+.stat b{font-size:38px}
+.sub-h{font-family:var(--display);font-stretch:72%;font-weight:600;letter-spacing:-.01em}
+
+/* entrega */
+.tbl table.left th,.tbl table.left td{text-align:left}
+.tbl table.left tr:last-child td{background:transparent;font-weight:400;font-size:16px}
+.tbl table.left td:first-child,.tbl table.left tr:last-child td:first-child{font-weight:700;white-space:nowrap}
+.checks.two{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;max-width:980px}
+
+/* mensagem */
+.headline{margin-top:56px;padding:48px 48px 52px;border-radius:20px;background:var(--ink);color:var(--cream);position:relative;overflow:hidden}
+.headline::after{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--gold-2) 85%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 7s linear infinite;pointer-events:none}
+.headline small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.headline p{font-family:var(--display);font-stretch:72%;font-weight:600;font-size:clamp(34px,4.4vw,60px);line-height:1.02;margin-top:18px;max-width:22ch;text-transform:uppercase}
+.headline p em{font-family:var(--serif);font-stretch:normal;font-style:italic;font-weight:400;text-transform:none;color:var(--gold-2)}
+.angles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.angle{padding:32px 28px;border-radius:18px;background:var(--paper);border:1px solid rgba(93,102,112,.18);transition:transform .6s var(--ease),box-shadow .6s}
+.angle:hover{transform:translateY(-4px);box-shadow:0 24px 48px -28px rgba(20,24,28,.35)}
+.angle small{font-size:11px;font-weight:700;letter-spacing:.26em;color:var(--gold-deep);text-transform:uppercase}
+.angle .pain{margin:14px 0 18px;color:var(--muted-dark);font-size:15.5px}
+.angle .open{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.3;color:var(--text-dark);padding-top:18px;border-top:1px solid rgba(93,102,112,.18)}
+
+@media (max-width:980px){
+  .profiles.four,.profiles.modules{grid-template-columns:1fr 1fr}
+  .scene.five{grid-template-columns:1fr 1fr}
+  .stance,.angles{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .profiles.four,.profiles.modules,.scene.five,.checks.two{grid-template-columns:1fr}
+  .headline{padding:34px 26px 38px}
+  .tbl table.left th,.tbl table.left td{padding:12px 10px;font-size:13.5px}
+  .tbl table.left td:first-child{white-space:normal}
+  .stance>div{padding:28px 24px}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="glow" id="glow"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="./"><small>Protocolo</small>Os bons <i>se encontram</i></a>
+  <nav class="tabs" aria-label="Produtos do protocolo"><a href="./">Para ela</a><a href="ele.html" class="on" aria-current="page">Para ele</a></nav>
+  <a class="nav-cta" href="#publico">Para quem é</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-copy">
+    <div class="eyebrow rv">Para Fernando Diniz · O lado dele</div>
+    <h1>
+      <span class="line-mask"><span>O Último</span></span>
+      <span class="line-mask"><span><em class="gold-text">Homem</em></span></span>
+    </h1>
+    <div class="tagline rv d2">Não seja apenas mais um na vida dela.</div>
+    <div class="rule"></div>
+    <p class="lead rv d3">Fernando, este é o produto masculino que eu desenhei a partir do seu método. Do lado dela, você ensina a ler um homem. Do lado dele, quero que você ensine o homem a desenvolver presença, conversar de verdade, perceber reciprocidade e escolher com critério. Ele vende numa VSL própria a R$297 na Nasten, com dois order bumps e um acompanhamento em grupo como upsell.</p>
+    <div class="hero-meta rv d4">Felipe Cavalcanti · Outubro 2026</div>
+  </div>
+  <div class="hero-media"><img src="img/ele-hero.jpg" alt="Fernando Diniz" data-par="0.07"></div>
+</section>
+
+<!-- 01 POR QUE É SEU -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">01 · Por que o lado dele também é seu</div>
+    <h2 class="rv d1">Você sabe o que ela aprendeu a <em>filtrar</em></h2>
+    <p class="lead rv d2">Mais de 1.200 mulheres aprenderam com você a identificar o homem que não vale a pena. Isso dá a você uma posição que nenhum guru de sedução tem: você sabe exatamente o que faz uma mulher atenta desconfiar e o que faz ela continuar a conversa. Pensei o produto masculino em cima dessa vantagem.</p>
+    <div class="grid-4">
+      <div class="card rv d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <h3>O outro lado da mesa</h3><p>Você ensina mulheres a ler comportamento masculino. Ninguém está em melhor posição para mostrar a um homem como ele está sendo lido.</p>
+      </div>
+      <div class="card rv d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8.2 8 9 4.6-.8 8-4.5 8-9V6l-8-3Z"/></svg>
+        <h3>Autoridade de leitura</h3><p>Na segurança pública, observar comportamento é o seu trabalho. Essa autoridade vale nos dois produtos e não depende de pose.</p>
+      </div>
+      <div class="card rv d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4 4-6.5 8-6.5s7.2 2.5 8 6.5"/></svg>
+        <h3>Homem falando com homem</h3><p>Sem personagem, sem grito de "macho alfa" e sem desprezo por mulher. Você fala como um homem maduro que já viu muito de perto.</p>
+      </div>
+      <div class="card rv d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16"/></svg>
+        <h3>Um espaço vazio</h3><p>O mercado masculino está tomado por manipulação e frase pronta. Quase ninguém ocupa o lugar do desenvolvimento maduro, e é ali que eu coloco este produto.</p>
+      </div>
+    </div>
+    <p class="punch rv">Do lado dela você já tem o método, a prova e o público. Do lado dele, <b>o seu método passa a trabalhar ao contrário</b>: em vez de ensinar a detectar o homem errado, ensina a ser o homem certo.</p>
+  </div>
+</section>
+
+<!-- 02 PÚBLICO -->
+<section class="pad" id="publico">
+  <div class="wrap">
+    <div class="eyebrow rv">02 · Para quem é</div>
+    <h2 class="rv d1">Ele não precisa de mais uma frase pronta para <em>impressionar</em></h2>
+    <p class="lead rv d2">Quando eu penso no homem que compra este produto, vejo um adulto que resolve a vida profissional, paga as contas e toma decisão no trabalho. Na vida amorosa, ele sente que fica sempre no meio do caminho: conversa sem avançar, investe sem receber de volta ou nem chega a ser notado pela mulher que admira. Ele chega até você em três momentos diferentes.</p>
+    <div class="profiles">
+      <div class="profile rv d1">
+        <small>Momento 1</small>
+        <h3>O que voltou ao jogo</h3>
+        <p>Saiu de um casamento ou de uma relação longa e descobriu que as regras mudaram. Os aplicativos parecem outro mundo, e a segurança que ele tinha aos 25 sumiu. Ele quer recomeçar sem parecer desesperado nem fingir ser outra pessoa.</p>
+      </div>
+      <div class="profile rv d2">
+        <small>Momento 2</small>
+        <h3>O que não é notado</h3>
+        <p>É um bom sujeito, mas sente que é ignorado pelas mulheres que admira. Já ouviu muitas vezes que é "um amor de pessoa" e continua sozinho. Ele suspeita que está comunicando alguma coisa errada e não sabe o quê.</p>
+      </div>
+      <div class="profile rv d3">
+        <small>Momento 3</small>
+        <h3>O que carrega sozinho</h3>
+        <p>Ele até consegue se aproximar, mas é sempre ele quem chama, quem planeja e quem insiste. Investe mais do que recebe, idealiza cedo demais e só percebe a falta de reciprocidade quando já gastou meses.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-h rv">A cena que se repete na vida <em>dele</em></h3>
+    <div class="scene">
+      <div class="scene-step rv d1"><div class="dot">1</div><h4>A idealização</h4><p>Ele conhece alguém interessante e, em poucos dias, já imagina um futuro inteiro com ela.</p></div>
+      <div class="scene-step rv d2"><div class="dot">2</div><h4>O excesso</h4><p>Manda mensagem demais, se adapta a tudo e esconde o que pensa para não desagradar.</p></div>
+      <div class="scene-step rv d3"><div class="dot">3</div><h4>O esfriamento</h4><p>Ela responde cada vez menos. Ele aumenta o esforço justamente quando deveria ler o sinal.</p></div>
+      <div class="scene-step rv d4"><div class="dot">4</div><h4>A conclusão errada</h4><p>Ele decide que o problema é a aparência, o dinheiro ou "as mulheres de hoje". Na próxima, a cena começa de novo, um pouco mais amarga.</p></div>
+    </div>
+    <p class="punch dark-punch rv">Quero que a VSL mostre essa cena sem humilhar ninguém e diga a ele algo que nenhum guru diz: <b>o problema não é falta de truque</b>, é falta de presença, de leitura e de critério. E isso se aprende.</p>
+
+    <h3 class="sub-h rv">Como eu leio esse <em>homem</em></h3>
+    <ul class="wants">
+      <li class="rv"><span><b>O que ele quer.</b> Despertar interesse, ter mais segurança social, melhorar os encontros e encontrar uma parceira compatível.</span></li>
+      <li class="rv d1"><span><b>O que ele sente.</b> Que é ignorado, que precisa provar o próprio valor o tempo todo, que conversa e não sai do lugar.</span></li>
+      <li class="rv"><span><b>O que ele já tentou.</b> Dica de internet, frase pronta, aplicativo, academia e roupa nova, sem que nada mudasse de fato.</span></li>
+      <li class="rv d1"><span><b>O que ele teme.</b> Ser rejeitado, parecer carente, ser tratado como opção ou perder anos numa relação que não combina com ele.</span></li>
+      <li class="rv"><span><b>O que ele precisa.</b> Um caminho prático e respeitoso, que trabalhe presença, conversa, discernimento e escolhas.</span></li>
+      <li class="rv d1"><span><b>O que ele não quer.</b> Virar personagem. Ele quer ser ele mesmo, só que numa versão que funciona.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 MERCADO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">03 · O que ele já ouviu por aí</div>
+    <h2 class="rv d1">Quase tudo que ele consumiu ensinava a <em>performar</em></h2>
+    <p class="lead rv d2">Ele já assistiu a vídeo de "macho alfa", decorou abertura de conversa, ouviu que precisava sumir para ela sentir falta e leu que toda mulher quer a mesma coisa. Uma parte desse conteúdo é inútil. Outra parte é desrespeitosa e afasta justamente a mulher madura que ele quer conhecer. Ele sai disso mais confuso, às vezes mais amargo, e continua procurando.</p>
+    <div class="vs rv d2">
+      <div class="vs-row head"><div>O que ele aprendeu até hoje</div><div>O que você ensina</div></div>
+      <div class="vs-row"><div>Decorar frases que funcionam com qualquer mulher</div><div>Iniciar conversas a partir do contexto, com curiosidade de verdade</div></div>
+      <div class="vs-row"><div>Criar um personagem dominante</div><div>Desenvolver presença sem deixar de ser quem é</div></div>
+      <div class="vs-row"><div>Joguinho de sumir para gerar ciúme</div><div>Demonstrar interesse com clareza e respeitar a resposta</div></div>
+      <div class="vs-row"><div>Ver mulher como troféu ou como inimiga</div><div>Avaliar se existe reciprocidade e compatibilidade</div></div>
+      <div class="vs-row"><div>Conquistar qualquer uma</div><div>Escolher com critério</div></div>
+    </div>
+    <p class="punch rv">Esse contraste coloca o produto numa categoria em que quase ninguém está: <b>desenvolvimento masculino aplicado à atração e às escolhas</b>. Mais concreto que autoajuda e mais maduro que curso de cantada.</p>
+  </div>
+</section>
+
+<!-- 04 O NOME -->
+<section class="pad" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="eyebrow rv">04 · O nome que escolhi</div>
+    <h2 class="rv d1">O Último Homem não é o último <em>disponível</em></h2>
+    <p class="lead rv d2">Escolhi um nome amplo, memorável e com cara de filme, que aguenta uma marca inteira. Mas sei que ele precisa ser explicado sempre do mesmo jeito, senão vira arrogância. O Último Homem não é o homem que sobrou nem alguém superior às mulheres. É o homem que sai do automático, ganha autocontrole, assume a responsabilidade pela própria vida e aprende a se relacionar sem implorar aprovação. É o último porque, depois dele, ela não precisa continuar procurando.</p>
+    <div class="tone rv" style="margin-top:56px">
+      <small>A pergunta da marca</small>
+      <p>Num cenário em que tantos homens tentam chamar atenção, o que faz um homem <em>se destacar</em>? E como ele escolhe alguém que também o escolhe?</p>
+    </div>
+
+    <h3 class="sub-h rv">O manifesto que eu <em>escrevi</em></h3>
+    <div class="manifesto">
+      <p class="rv">Existe uma diferença entre querer ser escolhido e construir uma vida da qual você se orgulha.</p>
+      <p class="rv">Entre correr atrás de atenção e aprender a criar conexão.</p>
+      <p class="rv">Entre idealizar uma mulher e descobrir se vocês realmente combinam.</p>
+      <p class="rv">O Último Homem é para quem decidiu parar de representar um papel, desenvolver a própria presença e escolher com consciência.</p>
+      <p class="rv last">Não para ser desejado por todas. Para não precisar <em>se abandonar</em> para ser desejado por alguém.</p>
+    </div>
+
+    <div class="stance">
+      <div class="rv d1">
+        <small>O que a marca defende</small>
+        <ul class="checks">
+          <li>O valor de um homem não depende da aprovação de uma mulher</li>
+          <li>Atração não se garante nem se controla. Dá para favorecer com presença, conversa e conexão</li>
+          <li>Interesse saudável precisa de reciprocidade, e não de perseguição</li>
+          <li>Escolher bem importa tanto quanto despertar interesse</li>
+          <li>Crescer como homem envolve vida própria, valores, aparência, comportamento e maturidade emocional</li>
+        </ul>
+      </div>
+      <div class="rv d2">
+        <small>O que a marca recusa</small>
+        <ul class="checks no">
+          <li>Prometer conquistar qualquer mulher ou acabar com toda rejeição</li>
+          <li>Manipulação, pressão, ciúme provocado ou desrespeito a limites</li>
+          <li>Personagem artificial e fórmula decorada que não combina com o aluno</li>
+          <li>A ideia de que todas as mulheres pensam e desejam a mesma coisa</li>
+          <li>Humilhar homem ou mulher para empurrar a compra</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 GRANDE IDEIA -->
+<section class="idea">
+  <div class="idea-copy">
+    <div class="eyebrow rv">05 · A ideia que escolhi para a VSL</div>
+    <h2 class="rv d1">Pare de agir <em>contra</em> o homem que quer ser.</h2>
+    <div class="rule rv d2"></div>
+    <p class="rv d3">Decidi construir a VSL inteira em cima desta virada: ele não precisa se transformar em outra pessoa. Precisa parar de fazer as coisas que o afastam das relações que ele quer, e desenvolver o que falta para se apresentar melhor, criar conexão e escolher com consciência.</p>
+    <p class="rv d4" style="margin-top:18px">É o espelho exato do lado dela. Ela aprende a escolher em vez de conquistar. Ele aprende que também escolhe, e que ser escolhido sem critério não é vitória nenhuma.</p>
+  </div>
+  <div class="idea-media"><img src="img/ele-ideia.jpg" alt="Fernando Diniz" data-par="0.08"></div>
+</section>
+
+<!-- 06 MECANISMO -->
+<section class="pad">
+  <div class="wrap">
+    <div class="eyebrow rv">06 · O mecanismo</div>
+    <h2 class="rv d1">Presença, Atração, Leitura e <em>Seleção</em></h2>
+    <p class="lead rv d2">Organizei o método em quatro pilares, cada um respondendo a uma pergunta que esse homem se faz sem perceber. A ordem importa: não adianta aprender a conversar antes de saber como ele chega, nem aprender a ler sinais antes de saber o que ele mesmo quer.</p>
+    <div class="profiles four">
+      <div class="profile rv d1"><small>Pilar 1</small><h3>Presença</h3><div class="q">Como eu chego e como sou percebido?</div><p>Apresentação pessoal, estilo, postura, linguagem corporal, confiança e coerência entre o que ele mostra e o que ele vive.</p></div>
+      <div class="profile rv d2"><small>Pilar 2</small><h3>Atração</h3><div class="q">Como eu crio espaço para uma conexão?</div><p>Iniciativa respeitosa, conversa, escuta, humor, curiosidade, convite e condução de um encontro.</p></div>
+      <div class="profile rv d3"><small>Pilar 3</small><h3>Leitura</h3><div class="q">O que os comportamentos mostram, e o que eu ainda não sei?</div><p>Observar sem tirar conclusão apressada, perceber interesse e reciprocidade, notar valores e compatibilidade.</p></div>
+      <div class="profile rv d4"><small>Pilar 4</small><h3>Seleção</h3><div class="q">Essa relação também faz sentido para mim?</div><p>Critérios, limites, ritmo, objetivos alinhados e a decisão de continuar ou seguir em frente.</p></div>
+    </div>
+
+    <h3 class="sub-h rv">Como os pilares viram <em>método</em></h3>
+    <div class="scene five">
+      <div class="scene-step rv d1"><div class="dot">1</div><h4>Diagnosticar</h4><p>Ele mapeia os padrões atuais, os pontos fortes e as situações que mais o deixam inseguro.</p></div>
+      <div class="scene-step rv d2"><div class="dot">2</div><h4>Desenvolver</h4><p>Pratica presença, conversa e iniciativa em situações reais, não só na teoria.</p></div>
+      <div class="scene-step rv d3"><div class="dot">3</div><h4>Observar</h4><p>Aprende a separar o que aconteceu de verdade do que ele imaginou.</p></div>
+      <div class="scene-step rv d4"><div class="dot">4</div><h4>Selecionar</h4><p>Define critérios, reconhece reciprocidade e decide sem se abandonar.</p></div>
+      <div class="scene-step rv d5"><div class="dot">5</div><h4>Consolidar</h4><p>Revisa as experiências, aprende com os resultados e monta um plano para continuar.</p></div>
+    </div>
+    <p class="punch dark-punch rv">É isso que separa o produto de um curso de cantadas: <b>nada aqui depende de decorar frase ou fingir status</b>. Para esse diferencial valer, cada pilar precisa sair com exercícios seus e exemplos que você viu acontecer.</p>
+  </div>
+</section>
+
+<!-- 07 TRANSFORMAÇÃO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">07 · O que muda para ele</div>
+    <h2 class="rv d1">Ele troca a ansiedade pelo <em>critério</em></h2>
+    <p class="lead rv d2">A promessa que eu quero é sair de um homem que depende demais de validação, não sabe interpretar reciprocidade e investe sem critério, e chegar a um homem que se apresenta com confiança, cria conversas naturais, avalia compatibilidade e age de acordo com os próprios valores. Quero que a comunicação mostre essa virada em cenas concretas.</p>
+    <div class="ba">
+      <div class="ba-head rv"><span>Antes</span><span></span><span>Depois do método</span></div>
+      <div class="ba-row rv"><div class="from">Trava na primeira mensagem e acaba mandando um "oi, tudo bem?"</div><div class="arrow">→</div><div class="to">Puxa a conversa pelo contexto e faz perguntas que ela quer responder</div></div>
+      <div class="ba-row rv"><div class="from">Faz o encontro parecer uma entrevista de emprego</div><div class="arrow">→</div><div class="to">Escuta, conta histórias e conduz o encontro com leveza</div></div>
+      <div class="ba-row rv"><div class="from">Insiste quando ela esfria e se convence de que é só fase</div><div class="arrow">→</div><div class="to">Lê a falta de reciprocidade cedo e redireciona a energia</div></div>
+      <div class="ba-row rv"><div class="from">Aceita qualquer interesse porque tem medo de ficar sozinho</div><div class="arrow">→</div><div class="to">Sabe o que procura e avalia se vocês combinam de verdade</div></div>
+      <div class="ba-row rv"><div class="from">Leva a rejeição para o lado pessoal e fica amargo</div><div class="arrow">→</div><div class="to">Lida com o "não" sem hostilidade e segue em frente inteiro</div></div>
+    </div>
+    <div class="tone rv">
+      <small>O tom que eu defini</small>
+      <p>Direto, sem agressividade. Provocativo, mas inteligente: desafia o comportamento, nunca humilha a pessoa. Masculino e maduro, sem gíria de internet e sem tratar rejeição como catástrofe. E prático: toda ideia importante vira <em>exemplo, exercício ou decisão</em>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 ARQUITETURA -->
+<section class="pad" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="eyebrow rv">08 · Como eu desenhei o produto</div>
+    <h2 class="rv d1">Nove módulos, e cada um termina com algo para <em>fazer</em></h2>
+    <p class="lead rv d2">Não quero um curso de vídeos motivacionais. Desenhei a grade para que cada módulo termine com um exercício que ele consegue aplicar na mesma semana. Essa grade é o meu ponto de partida. Ela fica pronta de verdade quando você colocar nela os casos que viu e as dúvidas que mais recebe.</p>
+    <div class="profiles modules">
+      <div class="profile rv d1"><small>Módulo 0</small><h3>O ponto de partida</h3><p>Diagnóstico pessoal, objetivos realistas, os padrões que ele quer mudar, como usar o método e o respeito a limites e consentimento.</p></div>
+      <div class="profile rv d2"><small>Módulo 1</small><h3>Presença masculina</h3><p>Estilo, postura, linguagem corporal e cuidado pessoal, com coerência entre imagem, rotina e identidade.</p></div>
+      <div class="profile rv d3"><small>Módulo 2</small><h3>Confiança sem personagem</h3><p>Medo de rejeição, parar de performar, construir vida própria e não medir o próprio valor pelo resultado de uma conversa.</p></div>
+      <div class="profile rv d1"><small>Módulo 3</small><h3>Conversas que conectam</h3><p>Começar pelo contexto, fazer perguntas abertas, escutar, contar histórias e usar humor, sem entrevista, monólogo ou roteiro rígido.</p></div>
+      <div class="profile rv d2"><small>Módulo 4</small><h3>Iniciativa e encontros</h3><p>Mostrar interesse com clareza, convidar sem pressão, planejar o encontro, estar presente nele e se comunicar depois.</p></div>
+      <div class="profile rv d3"><small>Módulo 5</small><h3>Leitura de reciprocidade</h3><p>Separar o que ele viu do que ele interpretou, avaliar consistência, reconhecer interesse e desinteresse e respeitar a resposta.</p></div>
+      <div class="profile rv d1"><small>Módulo 6</small><h3>Compatibilidade e critérios</h3><p>Valores, estilo de vida, expectativas e objetivos. A diferença entre atração e compatibilidade, e entre o essencial e a preferência.</p></div>
+      <div class="profile rv d2"><small>Módulo 7</small><h3>Autonomia emocional</h3><p>Lidar com silêncio e rejeição, parar de insistir sozinho, segurar o impulso, comunicar limites e seguir em frente sem hostilidade.</p></div>
+      <div class="profile rv d3"><small>Módulo 8</small><h3>Plano de aplicação</h3><p>Desafio prático de 21 dias, diário de experiências, revisão semanal e um plano para continuar depois do curso.</p></div>
+    </div>
+    <h3 class="sub-h rv">Os materiais que acompanham as <em>aulas</em></h3>
+    <ul class="wants">
+      <li class="rv">Workbook de diagnóstico e plano de desenvolvimento pessoal</li>
+      <li class="rv d1">Checklist de preparação para um encontro</li>
+      <li class="rv">Roteiro flexível para puxar conversa a partir do contexto, sem fala decorada</li>
+      <li class="rv d1">Matriz de compatibilidade e critérios pessoais</li>
+      <li class="rv">Diário de experiências com revisão semanal</li>
+      <li class="rv d1">Aulas de análise de situações, com as diferentes leituras possíveis de cada uma</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 09 ENTREGA -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">09 · Como ele percebe que está mudando</div>
+    <h2 class="rv d1">Cada etapa deixa uma <em>prova</em> na mão dele</h2>
+    <p class="lead rv d2">Homem desiste de curso quando não vê progresso. Por isso amarrei cada etapa a uma entrega concreta e a um sinal que ele consegue observar sozinho. Ele não precisa esperar um resultado com uma mulher para saber que avançou.</p>
+    <div class="tbl rv d2" style="margin-top:56px">
+      <table class="left">
+        <thead><tr><th>Etapa</th><th>O que ele recebe</th><th>O sinal de que aplicou</th></tr></thead>
+        <tbody>
+          <tr><td>Diagnóstico</td><td>Autoavaliação inicial</td><td>Identifica os dois ou três comportamentos que mais pesam</td></tr>
+          <tr><td>Presença</td><td>Checklist pessoal</td><td>Cria uma rotina simples de apresentação e postura</td></tr>
+          <tr><td>Comunicação</td><td>Exercícios de conversa</td><td>Pratica escuta, perguntas e convites claros</td></tr>
+          <tr><td>Leitura</td><td>Ficha de observação</td><td>Registra fatos sem confundir suposição com evidência</td></tr>
+          <tr><td>Seleção</td><td>Matriz de compatibilidade</td><td>Define critérios e enxerga alinhamentos e diferenças</td></tr>
+          <tr><td>Continuidade</td><td>Plano de 21 dias</td><td>Revê ações, aprendizados e próximos passos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="sub-h rv">O progresso que eu deixo o produto <em>prometer</em></h3>
+    <ul class="checks two rv d1" style="margin-top:36px">
+      <li>Mais clareza sobre o que ele busca numa relação</li>
+      <li>Mais conforto para começar e manter uma conversa</li>
+      <li>Mais facilidade para mostrar interesse e comunicar limites</li>
+      <li>Menos investimento de mão única quando não há reciprocidade</li>
+      <li>Decisões mais alinhadas aos próprios valores</li>
+      <li>Lidar com rejeição sem hostilidade e sem perder a identidade</li>
+    </ul>
+    <p class="punch rv">E deixei de fora, de propósito, qualquer promessa de número de mulheres, mensagens ou encontros. Isso depende de outra pessoa, e <b>prometer o que depende do outro é exatamente o que essa marca recusa</b>.</p>
+  </div>
+</section>
+
+<!-- 10 OFERTA -->
+<section class="pad">
+  <div class="wrap">
+    <div class="eyebrow rv">10 · Como eu montei a oferta</div>
+    <h2 class="rv d1">Ele vê <span data-count="1038" data-prefix="R$">R$1.038</span> na mesa e paga <em>R$297</em></h2>
+    <p class="lead rv d2">Coloquei o produto no mesmo preço do lado dela. R$297 é uma decisão que ele toma sozinho, logo depois de se reconhecer na VSL, e mantém os dois produtos do protocolo no mesmo patamar. A VSL vende todos os dias, com você gravando uma vez, e cada ajuste aparece no número da semana seguinte.</p>
+    <div class="offer-grid">
+      <div class="stack rv d1">
+        <div class="stack-row head"><span>O que entra</span><span>Valor</span></div>
+        <div class="stack-row"><span>O Último Homem: 9 módulos + workbook</span><span>R$697</span></div>
+        <div class="stack-row"><span>Bônus: Radar de Reciprocidade</span><span>R$97</span></div>
+        <div class="stack-row"><span>Bônus: Guia Presença Masculina</span><span>R$147</span></div>
+        <div class="stack-row"><span>Bônus: Matriz de Compatibilidade</span><span>R$97</span></div>
+        <div class="stack-row total"><span>Total percebido</span><span>R$1.038</span></div>
+      </div>
+      <div class="price rv d2">
+        <small>O preço que eu defini</small>
+        <div class="num"><sup>R$</sup><span data-count="297">297</span></div>
+        <div class="sub">à vista ou 12x no cartão</div>
+        <p>Garantia de 7 dias e acesso imediato a tudo. Na página digo com clareza quanto tempo ele precisa dedicar por semana, porque homem que sabe o esforço que vai fazer termina o curso.</p>
+      </div>
+    </div>
+    <h3 class="sub-h rv">Por que cada item está na <em>oferta</em></h3>
+    <ul class="wants">
+      <li class="rv"><span><b>Radar de Reciprocidade.</b> Ensina a observar interesse e consistência sem presumir a intenção dela. É o bônus que mais conversa com o seu lado da história.</span></li>
+      <li class="rv d1"><span><b>Guia Presença Masculina.</b> Apresentação, postura e comunicação num material de consulta rápida. Ele aplica antes de sair de casa.</span></li>
+      <li class="rv"><span><b>Matriz de Compatibilidade.</b> Transforma o pilar da Seleção numa ferramenta. Ele preenche, e para de confundir atração com combinação.</span></li>
+      <li class="rv d1"><span><b>Sem contador falso.</b> Não uso escassez inventada nem resultado garantido. Essa oferta precisa ser tão honesta quanto a marca que ela vende.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 11 ROTEIRO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">11 · O roteiro que desenhei · 15 a 20 minutos</div>
+    <h2 class="rv d1">Ele se reconhece <em>sem</em> se sentir humilhado</h2>
+    <p class="lead rv d2">A minha regra para essa VSL: abrir com uma cena que ele viveu, nomear o problema sem ridicularizar ninguém e ensinar uma ferramenta de verdade antes do preço. Ele precisa sair do vídeo com a sensação de que já aprendeu alguma coisa.</p>
+    <div class="timeline">
+      <div class="step rv"><div class="t">0:00</div><h4>Gancho</h4><p>A conversa que morreu sem explicação, contada do jeito que ele viveu</p></div>
+      <div class="step rv d1"><div class="t">1:30</div><h4>O problema</h4><p>Tentar ser aprovado sem desenvolver presença nem critério</p></div>
+      <div class="step rv d2"><div class="t">3:30</div><h4>Autoridade</h4><p>Você conta que ensinou 1.200 mulheres a filtrar homens e o que viu nesse processo</p></div>
+      <div class="step rv"><div class="t">5:00</div><h4>Nova perspectiva</h4><p>Atração, compatibilidade e escolha são três coisas diferentes</p></div>
+      <div class="step rv d1"><div class="t">7:00</div><h4>Demonstração</h4><p>Os quatro pilares com exemplos e um exercício inteiro: fato ou suposição</p></div>
+      <div class="step rv d2"><div class="t">11:00</div><h4>O método</h4><p>Módulos, materiais, tempo de dedicação, para quem é e para quem não é</p></div>
+      <div class="step key rv"><div class="t">13:00</div><h4>Oferta</h4><p>Você apresenta a oferta e o botão aparece na tela</p></div>
+      <div class="step rv d1"><div class="t">15:00</div><h4>Objeções</h4><p>"Já tentei de tudo", "não tenho aparência", "isso é coisa de coach"</p></div>
+      <div class="step rv d2"><div class="t">17:00</div><h4>Garantia</h4><p>Os 7 dias, o convite para entrar e o fechamento com "Que os bons se encontrem"</p></div>
+    </div>
+    <p class="punch rv">Nas objeções, a resposta nunca pode ser "com o método ela vai querer você". A resposta é <b>o que ele passa a fazer melhor</b>. Prometer controle sobre a vontade de outra pessoa derruba a marca inteira.</p>
+  </div>
+</section>
+
+<!-- 12 BUMPS -->
+<section class="pad">
+  <div class="wrap">
+    <div class="eyebrow rv">12 · Os dois bumps que coloquei no checkout</div>
+    <h2 class="rv d1">Dois complementos para a <em>semana</em> em que ele compra</h2>
+    <p class="lead rv d2">Escolhi dois complementos que ele usa logo de cara, sem terminar o curso e sem repetir o conteúdo principal. Os dois aparecem na tela do checkout e entram com um clique.</p>
+    <div class="bumps">
+      <div class="bump rv d1">
+        <div class="bump-top"><small>BUMP 1</small><b>R$47</b></div>
+        <h3>Primeiro Encontro</h3>
+        <p>Checklist de preparação e condução: como convidar sem pressão, como escolher o lugar, como manter a conversa viva e o que fazer depois que o encontro acaba.</p>
+        <div class="why"><b>Por que escolhi esse:</b> o encontro marcado é o momento de maior ansiedade dele, e ele usa o material na mesma semana.</div>
+      </div>
+      <div class="bump rv d2">
+        <div class="bump-top"><small>BUMP 2</small><b>R$37</b></div>
+        <h3>Conversas que Conectam</h3>
+        <p>Exercícios para começar e aprofundar uma conversa com naturalidade, seja no aplicativo, seja pessoalmente. É um roteiro flexível, sem frase decorada.</p>
+        <div class="why"><b>Por que escolhi esse:</b> resolve o travamento da primeira mensagem, e ele abre no mesmo dia em que compra.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 UPSELL -->
+<section class="upsell">
+  <div class="upsell-media"><img src="img/ele-mentoria.jpg" alt="Fernando Diniz" data-par="0.07"></div>
+  <div class="upsell-copy">
+    <div class="eyebrow rv">13 · Upsell em 1 clique</div>
+    <h2 class="rv d1">Depois do pagamento, ofereço o <em>Círculo</em></h2>
+    <p class="lead rv d2">Uma parte dos compradores vai querer mais que o curso gravado. Ele quer contar a situação dele e ouvir a sua leitura: aquela conversa, aquele encontro, aquela dúvida sobre continuar ou não. O Círculo O Último Homem é um acompanhamento em grupo com você, oferecido logo depois da compra, quando a confiança dele está mais alta.</p>
+    <div class="stats" style="margin-top:36px">
+      <div class="stat rv d1"><b>Ao vivo</b><span>encontros em grupo com você</span></div>
+      <div class="stat rv d2"><b>Turmas</b><span>pequenas, com vagas contadas</span></div>
+      <div class="stat dark rv d3"><b>1 clique</b><span>sem digitar o cartão de novo</span></div>
+    </div>
+    <ul class="checks rv d2">
+      <li>Você analisa situações reais dos alunos, sempre sem expor ninguém</li>
+      <li>Revisão do diário de experiências e do plano de 21 dias</li>
+      <li>Grupo fechado, com todos os encontros gravados</li>
+    </ul>
+    <div class="downsell rv d3"><b>Só abro o Círculo</b> com o número de vagas que você consegue acompanhar de verdade. O preço eu defino depois de fechar frequência, duração e suporte, para não vender uma entrega que a sua agenda não sustenta.</div>
+  </div>
+</section>
+
+<!-- 14 FUNIL -->
+<section class="pad" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="eyebrow rv">14 · O funil inteiro</div>
+    <h2 class="rv d1">O mesmo trilho do lado dela, com <em>porta própria</em></h2>
+    <p class="lead rv d2">O anúncio leva para a VSL e a VSL leva para o checkout. É a mesma estrutura do Método Mulher Magnética, mas com página, checkout, área de membros e grupo próprios. Um homem nunca cai no funil dela, e uma mulher nunca cai no dele.</p>
+    <div class="funnel" id="funnel">
+      <svg viewBox="0 0 1100 360" role="img" aria-label="Fluxo: Anúncio, VSL, Checkout com bumps, Círculo (upsell), Membros">
+        <path class="flow" d="M180 70 H220"/>
+        <path class="flow" d="M400 70 H440"/>
+        <path class="flow" d="M620 70 H660"/>
+        <path class="flow" d="M840 70 H880"/>
+        <path class="flow dashed" d="M530 130 V220" style="stroke-dasharray:5 5"/>
+        <g class="box" style="transition-delay:0s"><rect x="0" y="10" width="180" height="120" rx="12"/><text class="tt" x="90" y="64">Anúncio</text><text class="ts" x="90" y="90">vídeo do Fernando</text></g>
+        <g class="box" style="transition-delay:.12s"><rect x="220" y="10" width="180" height="120" rx="12"/><text class="tt" x="310" y="64">VSL</text><text class="ts" x="310" y="90">15 a 20 min</text></g>
+        <g class="box hl" style="transition-delay:.24s"><rect x="440" y="10" width="180" height="120" rx="12"/><text class="tt" x="530" y="64">Checkout</text><text class="ts" x="530" y="90">R$297 na Nasten</text></g>
+        <g class="box" style="transition-delay:.36s"><rect x="660" y="10" width="180" height="120" rx="12"/><text class="tt" x="750" y="64">Círculo</text><text class="ts" x="750" y="90">upsell em grupo</text></g>
+        <g class="box" style="transition-delay:.48s"><rect x="880" y="10" width="180" height="120" rx="12"/><text class="tt" x="970" y="64">Membros</text><text class="ts" x="970" y="90">acesso imediato</text></g>
+        <g class="box dash" style="transition-delay:.6s"><rect x="440" y="220" width="180" height="120" rx="12"/><text class="tt" x="530" y="272">Bump 1 · R$47</text><text class="tt" x="530" y="302">Bump 2 · R$37</text></g>
+        <text class="lbl g" x="518" y="180" text-anchor="end">na mesma tela</text>
+        <circle class="pulse" r="3.5"><animateMotion dur="5s" repeatCount="indefinite" path="M90 70 H970"/></circle>
+      </svg>
+      <div class="funnel-mobile">
+        <div class="fm rv"><b>Anúncio</b><span>vídeo do Fernando</span></div><div class="fm-arrow">↓</div>
+        <div class="fm rv"><b>VSL</b><span>15 a 20 min</span></div><div class="fm-arrow">↓</div>
+        <div class="fm hl rv"><b>Checkout</b><span>R$297 na Nasten</span></div>
+        <div class="fm sub rv"><b>Bumps</b><span>R$47 + R$37 na mesma tela</span></div><div class="fm-arrow">↓</div>
+        <div class="fm rv"><b>Círculo</b><span>upsell em grupo</span></div><div class="fm-arrow">↓</div>
+        <div class="fm rv"><b>Membros</b><span>acesso imediato</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 COMUNICAÇÃO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">15 · A mensagem</div>
+    <h2 class="rv d1">A frase que abre <em>tudo</em></h2>
+    <p class="lead rv d2">Escolhi uma headline principal que junta as duas metades do produto: o homem que se desenvolve e o homem que escolhe. Ela vai na página, na abertura dos anúncios e no primeiro minuto da VSL.</p>
+    <div class="headline rv d2">
+      <small>Headline principal</small>
+      <p>Pare de tentar ser o homem que todas querem. Torne-se o homem que sabe <em>qual mulher quer ao seu lado.</em></p>
+    </div>
+    <h3 class="sub-h rv">As variações que eu <em>testaria</em></h3>
+    <ul class="wants">
+      <li class="rv">"Ela conhece muitos. Lembra de poucos."</li>
+      <li class="rv d1">"Não seja apenas mais um na vida dela."</li>
+      <li class="rv">"Desenvolva presença, crie conexão e aprenda a escolher melhor."</li>
+      <li class="rv d1">"Pare de investir em relações que só você está tentando construir."</li>
+      <li class="rv">"Atração sem personagem. Interesse sem perseguição. Escolhas com critério."</li>
+      <li class="rv d1">"O método para melhorar sua presença, sua conversa e o seu discernimento."</li>
+    </ul>
+
+    <h3 class="sub-h rv">Os três ângulos de <em>entrada</em></h3>
+    <div class="angles">
+      <div class="angle rv d1"><small>A invisibilidade</small><p class="pain">Ele sente que não chama a atenção das mulheres que admira.</p><p class="open">"Você pode estar tentando chamar atenção sem entender o que está comunicando."</p></div>
+      <div class="angle rv d2"><small>A perseguição</small><p class="pain">Ele investe tempo e energia sem receber reciprocidade.</p><p class="open">"Interesse não deveria exigir que você carregasse uma relação sozinho."</p></div>
+      <div class="angle rv d3"><small>A seleção</small><p class="pain">Ele se preocupa tanto em ser escolhido que esquece de avaliar se combina.</p><p class="open">"Além de perguntar se ela gosta de você, você sabe se vocês combinam?"</p></div>
+    </div>
+
+    <h3 class="sub-h rv">As palavras da <em>marca</em></h3>
+    <div class="vs rv d2" style="margin-top:40px">
+      <div class="vs-row head"><div>Nunca entra</div><div>Sempre entra</div></div>
+      <div class="vs-row"><div>Dominar mulheres, fórmula infalível, qualquer mulher</div><div>Presença, critério, reciprocidade, clareza</div></div>
+      <div class="vs-row"><div>Nunca mais ser rejeitado, controlar o desejo dela</div><div>Conexão, autonomia, compatibilidade, escolha</div></div>
+      <div class="vs-row"><div>Fazer ela obedecer, hackear a mente feminina</div><div>Demonstrar intenção e reconhecer limites</div></div>
+      <div class="vs-row"><div>Manipular, garantir conquista</div><div>Desenvolver interesse e construir conexão</div></div>
+    </div>
+    <p class="punch rv">Visualmente, a marca vive de preto profundo, grafite, prata e branco frio, retrato editorial e muito espaço vazio. <b>Nada de lobo, leão, coroa, carro de luxo ou mulher como troféu.</b></p>
+  </div>
+</section>
+
+<!-- 16 TRÁFEGO -->
+<section class="pad" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="eyebrow rv">16 · Como eu rodaria o Meta Ads</div>
+    <h2 class="rv d1">Campanha própria, otimizada para <em>compra</em></h2>
+    <p class="lead rv d2">É a mesma lógica do lado dela, numa conta de anúncios que não se mistura. Primeiro garanto que cada venda é medida, depois testo os três ângulos e só então escalo o que provou que vende.</p>
+    <div class="traffic">
+      <div>
+        <div class="phase rv"><small>Fase 1</small><h3>Rastreamento</h3><p>Pixel e API de Conversões na página e no checkout, com evento de compra separado do produto feminino. Não coloco verba antes disso.</p></div>
+        <div class="phase rv"><small>Fase 2</small><h3>Teste de 7 dias</h3><p>Uma campanha CBO para homens de 25 a 45 anos, com um criativo por ângulo e mais dois de autoridade, de R$150 a R$300 por dia.</p></div>
+        <div class="phase rv"><small>Fase 3</small><h3>Escala</h3><p>O ângulo que vencer vai para Advantage+, e eu continuo subindo de 3 a 5 criativos novos por semana dentro dele.</p></div>
+      </div>
+      <div class="rv d2">
+        <div class="metrics">
+          <table>
+            <thead><tr><th>Métrica</th><th>O que eu cobro</th></tr></thead>
+            <tbody>
+              <tr><td>Hook rate (3s)</td><td>≥ 25%</td></tr>
+              <tr><td>CTR no link</td><td>≥ 1,2%</td></tr>
+              <tr><td>Retenção até o pitch</td><td>≥ 15%</td></tr>
+              <tr><td>Conversão da página</td><td>1,5% a 3%</td></tr>
+              <tr><td>CPA alvo</td><td>≤ R$180</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="metrics-note">São as mesmas metas do lado dela, para os dois produtos serem comparáveis. Na copy eu não falo do estado civil de quem assiste nem uso mulher como isca. Isso protege a conta e a marca.</p>
+      </div>
+    </div>
+    <h3 class="sub-h rv">Os 5 primeiros ganchos que eu <em>testaria</em></h3>
+    <ul class="wants">
+      <li class="rv">"Ensinei 1.200 mulheres a identificar o homem errado. Agora vou te mostrar o que elas aprenderam a filtrar"</li>
+      <li class="rv d1">"Você pode estar tentando chamar atenção sem entender o que está comunicando"</li>
+      <li class="rv">"Se é sempre você quem chama, quem planeja e quem insiste, assista até o fim"</li>
+      <li class="rv d1">"O que eu observo num homem nos primeiros minutos de um encontro"</li>
+      <li class="rv">"Ela conhece muitos. Lembra de poucos."</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROTOCOLO -->
+<section class="pad" id="protocolo" style="background:var(--ink)">
+  <div class="wrap">
+    <div class="eyebrow rv">17 · O protocolo</div>
+    <h2 class="rv d1">Os bons se encontram: <em>um protocolo, duas portas</em></h2>
+    <p class="lead rv d2">Fernando, este produto não nasce sozinho. Ele é a outra metade do seu Método Mulher Magnética. Do lado dela, você ensina a reconhecer quem não vale a pena. Do lado dele, ensina a ser um homem que vale. Por isso eu chamo o conjunto de Protocolo Os Bons Se Encontram. A tese é uma: relação boa começa quando as duas pessoas param de representar e passam a escolher com critério. Mas cada lado compra o seu produto, na sua VSL e no seu checkout.</p>
+    <div class="doors">
+      <a class="door rv d1" href="./">
+        <small>Para ela</small>
+        <h3>Método Mulher Magnética</h3>
+        <div class="say">Ela aprende a ler.</div>
+        <p>Os 13 códigos para identificar intenção, padrão e risco antes de se envolver. Ela para de tentar ser escolhida e passa a escolher quem fica.</p>
+        <div class="meta"><span>VSL própria · R$297 na Nasten</span><span class="go">← Ver o lado dela</span></div></a>
+      <svg class="seal rv d2" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="sealring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/></defs>
+        <g class="ring"><text><textPath href="#sealring" textLength="498" lengthAdjust="spacing">PROTOCOLO · OS BONS SE ENCONTRAM · PROTOCOLO · OS BONS SE ENCONTRAM ·</textPath></text></g>
+        <circle cx="88" cy="100" r="24"/><circle class="c2" cx="112" cy="100" r="24"/>
+      </svg>
+      <div class="door rv d3">
+        <small>Para ele</small>
+        <h3>O Último Homem</h3>
+        <div class="say">Ele aprende a ser lido.</div>
+        <p>Presença, conversa, leitura de reciprocidade e critério para escolher. Ele para de implorar aprovação e passa a se apresentar como o homem que quer ser.</p>
+        <div class="meta"><span>VSL própria · R$297 na Nasten</span><span class="here">Você está nesta aba</span></div></div>
+    </div>
+
+    <h3 class="sub-h rv">Por que eu vendo os dois <em>separados</em></h3>
+    <div class="profiles">
+      <div class="profile rv d1"><small>Motivo 1</small><h3>Cada dor pede uma conversa</h3><p>Ela chega com medo de errar de novo. Ele chega se sentindo invisível ou cansado de carregar a relação sozinho. Um vídeo que tentasse falar com os dois ao mesmo tempo não falaria direito com nenhum.</p></div>
+      <div class="profile rv d2"><small>Motivo 2</small><h3>A confiança de cada lado</h3><p>A mulher que compra para se proteger não pode sentir que está no mesmo carrinho de um curso masculino de atração, e o homem não quer comprar numa página feita para mulheres. Cada produto tem a sua página, a sua área de membros e o seu grupo. Nenhum checkout oferece o produto do outro lado.</p></div>
+      <div class="profile rv d3"><small>Motivo 3</small><h3>Números que não se misturam</h3><p>Rodo uma campanha para cada público no Meta, cada uma com o seu evento de compra. Assim eu sei quanto custa cada venda de cada lado, e o resultado de um produto nunca esconde o problema do outro.</p></div>
+    </div>
+
+    <h3 class="sub-h rv">O que os dois lados <em>compartilham</em></h3>
+    <ul class="wants">
+      <li class="rv"><span><b>Você.</b> O mesmo rosto e a mesma voz nas duas VSLs. A sua profissão de ler gente sustenta os dois produtos.</span></li>
+      <li class="rv d1"><span><b>A mesma frase.</b> As duas VSLs terminam em "Que os bons se encontrem". É a assinatura do protocolo.</span></li>
+      <li class="rv"><span><b>O mesmo vocabulário.</b> Critério, reciprocidade, clareza e escolha, dos dois lados.</span></li>
+      <li class="rv d1"><span><b>A mesma regra.</b> Nenhum dos dois promete controlar a vontade de outra pessoa.</span></li>
+      <li class="rv"><span><b>A mesma estrutura de funil.</b> VSL de 15 a 20 minutos, R$297, dois bumps e um acompanhamento em grupo como upsell.</span></li>
+      <li class="rv d1"><span><b>O mesmo selo.</b> O protocolo assina as duas páginas, e cada produto mantém o próprio nome e a própria cor.</span></li>
+    </ul>
+    <p class="punch dark-punch rv">Do lado dela, você ensina a reconhecer o homem que não vale a pena. Do lado dele, ensina a ser <b>o homem que passa nesse teste</b>. É assim que os bons se encontram.</p>
+  </div>
+</section>
+
+
+<!-- FECHAMENTO -->
+<section class="close" id="proximo">
+  <div class="close-copy">
+    <h2>
+      <span class="line-mask rv"><span class="gold-text">Que os bons</span></span>
+      <span class="line-mask rv"><span class="gold-text">se encontrem.</span></span>
+    </h2>
+    <div class="rule rv d2"></div>
+    <p class="rv d3">Esse é o produto que eu enxergo do lado dele: um homem que desenvolve presença sem criar personagem, mostra interesse sem pressionar, reconhece reciprocidade sem fantasiar e escolhe sem se abandonar. Do outro lado, uma mulher que aprendeu a enxergar. O protocolo existe para esses dois se encontrarem.</p>
+  </div>
+  <div class="close-media"><img src="img/ele-hero.jpg" alt="Fernando Diniz" data-par="0.06"></div>
+</section>
+
+<footer><span>Felipe Cavalcanti · Outubro 2026</span><span>Protocolo Os Bons Se Encontram · Preparado para Fernando Diniz</span></footer>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lenis = null;
+  if (!reduce && window.Lenis) {
+    lenis = new Lenis({ duration: 1.25, easing: function(t){ return Math.min(1, 1.001 - Math.pow(2, -10 * t)); }, smoothWheel: true });
+    requestAnimationFrame(function raf(t){ lenis.raf(t); requestAnimationFrame(raf); });
+    window.__lenis = lenis;
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener('click', function(e){ e.preventDefault(); lenis.scrollTo(a.getAttribute('href'), { duration: 1.8 }); });
+    });
+  }
+
+  // reveal
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .18, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.rv,.phase,.funnel,.line-mask').forEach(function(el){ io.observe(el); });
+  requestAnimationFrame(function(){ setTimeout(function(){ document.getElementById('hero').classList.add('in'); document.querySelectorAll('#hero .line-mask').forEach(function(m){ m.classList.add('in'); }); }, 120); });
+
+  // funnel path lengths
+  document.querySelectorAll('.funnel path.flow').forEach(function(p){ if(!p.classList.contains('dashed')) p.style.setProperty('--len', p.getTotalLength()); else p.style.setProperty('--len', 0); });
+
+  // counters
+  var fmt = function(n){ return n.toLocaleString('pt-BR'); };
+  var cio = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return; cio.unobserve(e.target);
+      var el = e.target, end = +el.dataset.count, pre = el.dataset.prefix || '', t0 = null, dur = 1800;
+      if (reduce) return;
+      (function step(t){ if(!t0) t0 = t; var k = Math.min(1,(t-t0)/dur); k = 1 - Math.pow(1-k, 4);
+        el.textContent = pre + fmt(Math.round(end*k)); if (k<1) requestAnimationFrame(step); })(performance.now());
+    });
+  }, { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(function(el){ cio.observe(el); });
+
+  // scroll-linked: progress, nav, parallax
+  var prog = document.getElementById('progress'), nav = document.getElementById('nav');
+  var pars = [].slice.call(document.querySelectorAll('[data-par]'));
+  function onScroll(){
+    var y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = 'scaleX(' + (h > 0 ? y/h : 0) + ')';
+    nav.classList.toggle('solid', y > 40);
+    if (reduce) return;
+    pars.forEach(function(img){
+      var r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      var c = Math.max(-1, Math.min(1, (r.top + r.height/2 - innerHeight/2) / innerHeight));
+      img.style.translate = '0 ' + (c * -100 * +img.dataset.par) + '%';
+    });
+  }
+  if (lenis) lenis.on('scroll', onScroll); else addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+
+  // abas do protocolo: saída suave entre as páginas
+  document.querySelectorAll('.tabs a:not(.on), a.door[href]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if (e.metaKey || e.ctrlKey || e.shiftKey || reduce) return;
+      e.preventDefault(); document.documentElement.classList.add('leaving');
+      setTimeout(function(){ location.href = a.href; }, 400);
+    });
+  });
+  addEventListener('pageshow', function(){ document.documentElement.classList.remove('leaving'); });
+
+  // cursor glow + bump spotlight
+  var glow = document.getElementById('glow');
+  if (matchMedia('(hover:hover)').matches && !reduce){
+    addEventListener('pointermove', function(e){ glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, { passive: true });
+    document.querySelectorAll('.bump').forEach(function(b){
+      b.addEventListener('pointermove', function(e){ var r = b.getBoundingClientRect(); b.style.setProperty('--mx', (e.clientX-r.left)+'px'); b.style.setProperty('--my', (e.clientY-r.top)+'px'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>
