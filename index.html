@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Proposta · Método Mulher Magnética</title>
-<meta name="description" content="Proposta de VSL perpétua para Fernando Diniz — Mega Social Media, outubro de 2026.">
+<title>Método Mulher Magnética</title>
+<meta name="description" content="A ideia do produto Método Mulher Magnética em VSL, preparada para Fernando Diniz.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -307,6 +307,73 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   .fm-arrow{text-align:center;color:var(--gold-deep);font-size:14px;line-height:1}
   .upsell-media{min-height:0;height:70svh}
 }
+
+/* público */
+.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:64px}
+.profile{position:relative;padding:36px 30px 38px;border-radius:18px;background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);transition:border-color .6s,transform .6s var(--ease)}
+.profile:hover{border-color:rgba(201,164,106,.5);transform:translateY(-4px)}
+.profile small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.profile h3{font-size:clamp(28px,2.6vw,34px);color:var(--cream);margin:14px 0 16px;line-height:1.08}
+.profile p{color:var(--muted);font-size:16px}
+.sub-h{font-family:var(--serif);font-size:clamp(30px,3.4vw,44px);font-weight:500;line-height:1.1;margin-top:110px;max-width:22ch}
+.sub-h em{font-style:italic;color:var(--gold)}
+.light .sub-h em{color:var(--gold-deep)}
+.scene{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:48px;position:relative}
+.scene::before{content:"";position:absolute;left:0;right:0;top:21px;height:1px;background:var(--line)}
+.scene-step{position:relative}
+.scene-step .dot{width:43px;height:43px;border-radius:50%;border:1px solid var(--gold);background:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-size:20px;color:var(--gold-2);margin-bottom:22px;position:relative;font-variant-numeric:lining-nums}
+.scene-step h4{font-size:17px;font-weight:700;color:var(--cream);margin-bottom:8px}
+.scene-step p{font-size:15.5px;color:var(--muted)}
+.wants{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin-top:40px;list-style:none;max-width:900px}
+.wants li{display:flex;gap:14px;font-size:17px;color:var(--text);padding:18px 0;border-bottom:1px solid var(--line)}
+.wants li b{color:var(--gold-2);font-weight:600}
+.wants li::before{content:"";flex:none;width:7px;height:7px;margin-top:10px;border-radius:50%;background:var(--gold)}
+.punch.dark-punch{color:var(--cream)}
+.punch.dark-punch b{color:var(--gold-2)}
+
+/* contraste */
+.vs{margin-top:64px;border-radius:20px;overflow:hidden;border:1px solid rgba(154,120,69,.22);background:var(--paper)}
+.vs-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid rgba(154,120,69,.14)}
+.vs-row:last-child{border-bottom:0}
+.vs-row>div{padding:22px 28px;font-size:16.5px}
+.vs-row>div:first-child{color:var(--muted-dark);text-decoration:line-through;text-decoration-color:rgba(154,120,69,.45);text-decoration-thickness:1px}
+.vs-row>div:last-child{border-left:1px solid rgba(154,120,69,.14);font-weight:600;color:var(--text-dark);background:rgba(201,164,106,.07)}
+.vs-row.head>div{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;background:var(--cream-2);color:var(--muted-dark)}
+.vs-row.head>div:last-child{color:var(--gold-deep)}
+
+/* antes e depois */
+.ba{margin-top:64px;display:grid;gap:14px}
+.ba-row{display:grid;grid-template-columns:1fr 56px 1fr;align-items:center;gap:0;border-radius:16px;background:var(--paper);border:1px solid rgba(154,120,69,.16);overflow:hidden;transition:box-shadow .6s,transform .6s var(--ease)}
+.ba-row:hover{transform:translateY(-3px);box-shadow:0 22px 44px -28px rgba(80,58,30,.35)}
+.ba-row>div{padding:22px 26px;font-size:16px}
+.ba-row .from{color:var(--muted-dark)}
+.ba-row .arrow{text-align:center;color:var(--gold-deep);font-size:20px}
+.ba-row .to{font-weight:600;background:rgba(201,164,106,.09);height:100%;display:flex;align-items:center}
+.ba-head{display:grid;grid-template-columns:1fr 56px 1fr;font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-dark);padding:0 26px}
+.ba-head span:last-child{color:var(--gold-deep)}
+.tone{margin-top:56px;padding:40px 44px;border-radius:20px;background:var(--ink);color:var(--cream);display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start}
+.tone small{font-size:11px;font-weight:600;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;white-space:nowrap;padding-top:8px}
+.tone p{font-family:var(--serif);font-size:clamp(22px,2.2vw,28px);line-height:1.35}
+.tone p em{color:var(--gold-2)}
+@media (max-width:980px){
+  .profiles{grid-template-columns:1fr}
+  .scene{grid-template-columns:1fr 1fr;row-gap:40px}
+  .scene::before{display:none}
+}
+@media (max-width:760px){
+  .scene,.wants{grid-template-columns:1fr}
+  .vs-row{grid-template-columns:1fr}
+  .vs-row>div:last-child{border-left:0;border-top:1px dashed rgba(154,120,69,.2)}
+  .vs-row.head{display:none}
+  .vs-row>div{padding:16px 20px}
+  .ba-head{display:none}
+  .ba-row{grid-template-columns:1fr}
+  .ba-row .arrow{display:none}
+  .ba-row .from{padding-bottom:10px}
+  .ba-row .to{padding-top:14px}
+  .tone{grid-template-columns:1fr;gap:16px;padding:32px 26px}
+  .sub-h{margin-top:80px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv,.line-mask>span,.funnel .box{opacity:1!important;transform:none!important;filter:none!important}
@@ -320,20 +387,20 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
 
 <header class="nav" id="nav">
   <div class="brand">Mulher <i>Magnética</i></div>
-  <a class="nav-cta" href="#proximo">Próximo passo</a>
+  <a class="nav-cta" href="#publico">Para quem é</a>
 </header>
 
 <!-- 01 HERO -->
 <section class="hero" id="hero">
   <div class="hero-copy">
-    <div class="eyebrow rv">Proposta para Fernando Diniz</div>
+    <div class="eyebrow rv">Para Fernando Diniz</div>
     <h1>
       <span class="line-mask"><span>Método Mulher</span></span>
       <span class="line-mask"><span><em class="gold-text">Magnética</em></span></span>
       <span class="line-mask"><span>em VSL</span></span>
     </h1>
     <div class="rule"></div>
-    <p class="lead rv d3">Fernando, montei este plano para o seu método vender todo dia, sem depender de lançamento. É uma VSL a R$297, com dois order bumps no checkout e a sua mentoria de 3 meses como upsell.</p>
+    <p class="lead rv d3">Fernando, organizei aqui a ideia que eu tenho para o seu método: para quem ele é, o que ele muda na vida dela e como ele pode vender todo dia, sem depender de lançamento, numa VSL a R$297 com dois order bumps e a sua mentoria de 3 meses como upsell.</p>
     <div class="hero-meta rv d4">Felipe Cavalcanti · Mega Social Media · Outubro 2026</div>
   </div>
   <div class="hero-media"><img src="img/hero.jpg" alt="Fernando Diniz" data-par="0.07"></div>
@@ -344,6 +411,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   <div class="wrap">
     <div class="eyebrow rv">01 · O que eu vi no seu material</div>
     <h2 class="rv d1">A parte difícil você <em>já fez</em></h2>
+    <p class="lead rv d2">Antes de pensar em funil, olhei o que você já tem. A maioria dos experts precisa construir autoridade, método e prova do zero antes de vender qualquer coisa. Você já tem os quatro pilares que uma VSL precisa para funcionar, e isso encurta muito o caminho.</p>
     <div class="grid-4">
       <div class="card rv d1">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
@@ -366,23 +434,130 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
   </div>
 </section>
 
-<!-- 03 GRANDE IDEIA -->
+<!-- 02 PÚBLICO -->
+<section class="pad" id="publico">
+  <div class="wrap">
+    <div class="eyebrow rv">02 · Para quem é</div>
+    <h2 class="rv d1">Ela não precisa de mais um conselho sobre <em>como agradar</em></h2>
+    <p class="lead rv d2">Quando eu penso em quem compra o seu método, vejo uma mulher de 20 a 45 anos que resolve a vida profissional sem pedir ajuda a ninguém. Na vida amorosa, ela repete o mesmo roteiro há anos e não entende por que sempre termina do mesmo jeito. Ela chega até você em três momentos diferentes.</p>
+    <div class="profiles">
+      <div class="profile rv d1">
+        <small>Momento 1</small>
+        <h3>A que está voltando aos encontros</h3>
+        <p>Saiu de uma relação que a desgastou e voltou para os aplicativos com medo de cair no mesmo tipo de homem. Ela quer recomeçar, mas não confia mais no próprio julgamento.</p>
+      </div>
+      <div class="profile rv d2">
+        <small>Momento 2</small>
+        <h3>A que está conhecendo alguém agora</h3>
+        <p>Tem alguém novo na vida dela, e ela passa o dia analisando mensagem, tempo de resposta e mudança de tom. Manda print para as amigas pedindo opinião. Quer saber se ele é quem parece ser antes de se envolver de vez.</p>
+      </div>
+      <div class="profile rv d3">
+        <small>Momento 3</small>
+        <h3>A que já está numa relação</h3>
+        <p>Casada ou namorando, ela sente que alguma coisa mudou e não consegue dar nome. Não quer terminar por impulso nem continuar no escuro. Quer entender com clareza o que está acontecendo.</p>
+      </div>
+    </div>
+
+    <h3 class="sub-h rv">A cena que se repete na vida <em>dela</em></h3>
+    <div class="scene">
+      <div class="scene-step rv d1"><div class="dot">1</div><h4>O começo intenso</h4><p>Ele aparece com atenção total, elogios e pressa. Ela se sente escolhida.</p></div>
+      <div class="scene-step rv d2"><div class="dot">2</div><h4>Os sinais que ela relevou</h4><p>Surge uma mentira pequena, um ciúme com cara de cuidado, uma mudança de humor. Ela percebe e deixa passar.</p></div>
+      <div class="scene-step rv d3"><div class="dot">3</div><h4>O afastamento</h4><p>A atenção some, e ela passa a correr atrás do homem que conheceu no começo.</p></div>
+      <div class="scene-step rv d4"><div class="dot">4</div><h4>A culpa</h4><p>Ela conclui que o problema é ela ou que foi falta de sorte. Na relação seguinte, a cena começa de novo.</p></div>
+    </div>
+    <p class="punch dark-punch rv">Quero que a VSL mostre essa cena com a sua voz e diga a ela algo que ninguém disse ainda: <b>os sinais estavam lá desde o primeiro encontro</b>, e dá para aprender a ler.</p>
+
+    <h3 class="sub-h rv">O que ela procura quando para no seu <em>vídeo</em></h3>
+    <ul class="wants">
+      <li class="rv">Entender por que escolhe sempre o mesmo tipo de homem</li>
+      <li class="rv d1">Perceber cedo quando alguém não tem boa intenção</li>
+      <li class="rv">Parar de se esforçar para ser escolhida</li>
+      <li class="rv d1">Voltar a confiar no próprio julgamento</li>
+      <li class="rv">Sair de um encontro com segurança quando algo não estiver certo</li>
+      <li class="rv d1">Ter resposta para manipulação sem precisar brigar</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 MERCADO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">03 · O que ela já ouviu por aí</div>
+    <h2 class="rv d1">Quase tudo que ela consumiu até hoje ensinava a <em>conquistar</em></h2>
+    <p class="lead rv d2">Ela já seguiu perfil de sedução, fez curso de autoestima, copiou mensagem pronta para fazer ele voltar e decorou regra de quantas horas esperar para responder. Tudo isso coloca o homem no centro e deixa ela no papel de quem precisa ser aprovada. Por isso o resultado dura pouco, e ela continua procurando.</p>
+    <div class="vs rv d2">
+      <div class="vs-row head"><div>O que ela aprendeu até hoje</div><div>O que você ensina</div></div>
+      <div class="vs-row"><div>Como chamar a atenção dele</div><div>Como ler o comportamento dele antes de se envolver</div></div>
+      <div class="vs-row"><div>Joguinhos de tempo e de mensagem</div><div>13 códigos para identificar intenção, padrão e risco</div></div>
+      <div class="vs-row"><div>Se ele sumiu, mudar a si mesma</div><div>Se ele sumiu, entender o que os sinais já mostravam</div></div>
+      <div class="vs-row"><div>Conselho de quem nunca estudou comportamento</div><div>Método de quem lê gente por profissão</div></div>
+      <div class="vs-row"><div>Ser escolhida</div><div>Escolher</div></div>
+    </div>
+    <p class="punch rv">Esse contraste faz o seu método parecer novo para quem já consumiu de tudo. É nele que eu apoio a <b>grande ideia</b> da VSL.</p>
+  </div>
+</section>
+
+<!-- POR QUE VOCÊ -->
+<section class="pad" style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="eyebrow rv">04 · Por que você</div>
+    <h2 class="rv d1">Quem ensina a ler gente precisa ler gente <em>de verdade</em></h2>
+    <p class="lead rv d2">O mercado de relacionamento está cheio de gente que fala bem e nunca estudou comportamento. Você trabalha com isso. Na segurança pública, perceber uma intenção antes que ela vire problema faz parte da rotina, e é essa habilidade que ela quer levar para a vida amorosa.</p>
+    <div class="profiles">
+      <div class="profile rv d1"><small>Credibilidade</small><h3>A profissão como prova</h3><p>Não preciso inventar argumento de autoridade. Basta você contar o que observa no trabalho e mostrar como isso se aplica a um primeiro encontro. A credibilidade vem junto com a história.</p></div>
+      <div class="profile rv d2"><small>Perspectiva</small><h3>Um homem explicando os homens</h3><p>Ela ouve de um homem como os homens agem quando querem manipular e quando têm boa intenção. Essa visão de dentro é rara no mercado e desperta curiosidade já no anúncio.</p></div>
+      <div class="profile rv d3"><small>Categoria</small><h3>Segurança antes de sedução</h3><p>O seu método protege antes de seduzir. Isso tira o produto da prateleira de "como conquistar" e coloca numa categoria onde quase ninguém está: a mulher que quer escolher com segurança.</p></div>
+    </div>
+    <p class="punch dark-punch rv">Por isso eu coloco você no centro de toda a comunicação. <b>O rosto, a voz e a profissão</b> são o que nenhum concorrente consegue copiar.</p>
+  </div>
+</section>
+
+<!-- 04 GRANDE IDEIA -->
 <section class="idea">
   <div class="idea-copy">
-    <div class="eyebrow rv">02 · A ideia que escolhi para a VSL</div>
+    <div class="eyebrow rv">05 · A ideia que escolhi para a VSL</div>
     <h2 class="rv d1">Escolher, <em>não</em> conquistar.</h2>
     <div class="rule rv d2"></div>
     <p class="rv d3">Decidi construir a VSL inteira em cima dessa virada: ela para de implorar atenção e passa a escolher quem fica. A sua profissão entra como argumento, porque quem ensina isso lê comportamento todo dia no trabalho.</p>
+    <p class="rv d4" style="margin-top:18px">Essa frase vira o fio de tudo: da VSL, dos anúncios, da página e do checkout. Cada peça volta a ela, para que a mulher termine o vídeo repetindo a ideia com as próprias palavras.</p>
   </div>
   <div class="idea-media"><img src="img/ideia.jpg" alt="Fernando Diniz com o selo dos 13 códigos" data-par="0.08"></div>
 </section>
 
-<!-- 04 OFERTA -->
+<!-- 05 TRANSFORMAÇÃO -->
+<section class="light pad">
+  <div class="wrap">
+    <div class="eyebrow rv">06 · O que muda para ela</div>
+    <h2 class="rv d1">Ela troca a dúvida pela <em>leitura</em></h2>
+    <p class="lead rv d2">Quero que toda a comunicação mostre essa virada em situações concretas do dia a dia dela. Promessa abstrata ela já ouviu demais. O que convence é se reconhecer na cena de antes e enxergar a cena de depois.</p>
+    <div class="ba">
+      <div class="ba-head rv"><span>Antes</span><span></span><span>Depois do método</span></div>
+      <div class="ba-row rv"><div class="from">Passa a noite relendo a conversa para entender o que ele quis dizer</div><div class="arrow">→</div><div class="to">Reconhece o padrão da mensagem e sabe o que ele indica</div></div>
+      <div class="ba-row rv"><div class="from">Percebe as red flags só depois que já se machucou</div><div class="arrow">→</div><div class="to">Identifica os sinais de risco ainda no primeiro encontro</div></div>
+      <div class="ba-row rv"><div class="from">Responde à manipulação na emoção e se arrepende depois</div><div class="arrow">→</div><div class="to">Tem a resposta pronta e encerra a conversa com firmeza</div></div>
+      <div class="ba-row rv"><div class="from">Aceita menos do que quer por medo de ficar sozinha</div><div class="arrow">→</div><div class="to">Escolhe com calma quem tem espaço na vida dela</div></div>
+      <div class="ba-row rv"><div class="from">Acha que o problema é ela ou falta de sorte</div><div class="arrow">→</div><div class="to">Entende o próprio padrão e sabe como interromper</div></div>
+    </div>
+    <div class="tone rv">
+      <small>O tom que eu defini</small>
+      <p>Sem raiva de homem, sem promessa de fazer alguém se apaixonar e sem expor nenhuma aluna. Você fala como <em>quem protege</em>: com firmeza, com calma e com a autoridade de quem já viu muito comportamento de perto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 OFERTA -->
 <section class="pad">
   <div class="wrap">
-    <div class="eyebrow rv">03 · Como eu montei a oferta</div>
+    <div class="eyebrow rv">07 · Como eu montei a oferta</div>
     <h2 class="rv d1">Ela vê <span data-count="1138" data-prefix="R$">R$1.138</span> na mesa e paga <em>R$297</em></h2>
-    <div class="offer-grid">
+    <p class="lead rv d2">Escolhi R$297 porque é um valor que ela decide sozinha, logo depois de se reconhecer na VSL, sem precisar pensar uma semana. E escolhi vender em VSL, e não em lançamento, por três motivos.</p>
+    <div class="profiles">
+      <div class="profile rv d1"><small>Motivo 1</small><h3>Vende todo dia</h3><p>O lançamento concentra o faturamento numa semana e deixa o resto do mês parado. A VSL vende de segunda a segunda, e o anúncio roda enquanto você está trabalhando.</p></div>
+      <div class="profile rv d2"><small>Motivo 2</small><h3>Você grava uma vez</h3><p>A sua rotina não permite ficar ao vivo toda semana para vender. Com a VSL, você grava a apresentação uma vez e ela se repete para cada mulher que chega.</p></div>
+      <div class="profile rv d3"><small>Motivo 3</small><h3>Cada ajuste aparece no número</h3><p>Com tráfego todo dia, eu vejo rápido o que funciona: qual gancho segura, em que minuto ela sai do vídeo e quanto custa cada venda. Dá para melhorar semana a semana.</p></div>
+    </div>
+    <h3 class="sub-h rv">E esta é a <em>oferta</em> que ela encontra no fim do vídeo</h3>
+    <div class="offer-grid" style="margin-top:48px">
       <div class="stack rv d1">
         <div class="stack-row head"><span>O que entra</span><span>Valor</span></div>
         <div class="stack-row"><span>Método: 4 módulos, 13 códigos</span><span>R$697</span></div>
@@ -398,13 +573,20 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
         <p>Garantia de 7 dias e todos os módulos liberados na hora. Libero tudo de uma vez porque, nesse público, quem compra quer começar no mesmo dia.</p>
       </div>
     </div>
+  <h3 class="sub-h rv">Por que cada item está na <em>oferta</em></h3>
+    <ul class="wants">
+      <li class="rv"><span><b>Mapa das 21 Red Flags.</b> É o material que ela consulta antes de cada encontro, e mantém o método presente no dia a dia dela.</span></li>
+      <li class="rv d1"><span><b>Aula Linguagem Masculina.</b> Responde a dúvida que mais ocupa a cabeça dela: o que ele quis dizer com aquilo.</span></li>
+      <li class="rv"><span><b>Live mensal, só para quem compra em 48h.</b> Dá um motivo para ela decidir agora e cria um contato direto com você.</span></li>
+      <li class="rv d1"><span><b>Garantia de 7 dias.</b> Tira o medo de ser mais um curso que não serve. Quem assistiu à VSL inteira já viu um código funcionar.</span></li>
+    </ul>
   </div>
 </section>
 
 <!-- 05 ROTEIRO -->
 <section class="light pad">
   <div class="wrap">
-    <div class="eyebrow rv">04 · O roteiro que desenhei · 15 a 20 minutos</div>
+    <div class="eyebrow rv">08 · O roteiro que desenhei · 15 a 20 minutos</div>
     <h2 class="rv d1">Ela sai com uma vitória <em>antes</em> de ver o preço</h2>
     <p class="lead rv d2">A minha regra para essa VSL: você ensina um código de verdade antes de falar de preço. Ela aplica a Lente Limpa na própria história, vê que funciona e só depois ouve a oferta.</p>
     <div class="timeline">
@@ -418,14 +600,16 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
       <div class="step rv d1"><div class="t">15:00</div><h4>Garantia</h4><p>Os 7 dias de garantia e o convite para entrar</p></div>
       <div class="step rv d2"><div class="t">17:00</div><h4>Objeções</h4><p>Você responde: "sou casada", "não tenho tempo", "já fiz curso"</p></div>
     </div>
+    <p class="punch rv">Escolhi entre 15 e 20 minutos porque é o tempo de <b>ensinar um código de verdade</b> sem cansar. Mais curta, a VSL vira anúncio. Mais longa, perde a mulher antes da oferta.</p>
   </div>
 </section>
 
 <!-- 06 BUMPS -->
 <section class="pad">
   <div class="wrap">
-    <div class="eyebrow rv">05 · Os dois bumps que coloquei no checkout</div>
+    <div class="eyebrow rv">09 · Os dois bumps que coloquei no checkout</div>
     <h2 class="rv d1">Dois complementos que ela usa <em>no mesmo dia</em></h2>
+    <p class="lead rv d2">Order bump funciona quando o complemento resolve um problema imediato e custa pouco perto do produto principal. Escolhi dois que ela usa no mesmo dia, sem precisar terminar o curso antes. Os dois aparecem na tela do checkout, marcados com um clique.</p>
     <div class="bumps">
       <div class="bump rv d1">
         <div class="bump-top"><small>BUMP 1</small><b>R$47</b></div>
@@ -447,9 +631,10 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
 <section class="upsell">
   <div class="upsell-media"><img src="img/mentoria.jpg" alt="Fernando Diniz" data-par="0.07"></div>
   <div class="upsell-copy">
-    <div class="eyebrow rv">06 · Upsell em 1 clique</div>
+    <div class="eyebrow rv">10 · Upsell em 1 clique</div>
     <h2 class="rv d1">Logo depois do pagamento, ofereço a sua <em>mentoria</em></h2>
-    <div class="stats">
+    <p class="lead rv d2">Uma parte das compradoras vai querer mais que o curso gravado. Ela quer mostrar o caso dela e ouvir a sua leitura sobre aquela relação específica. A mentoria entra para essa mulher, no momento em que a confiança está mais alta, que é logo depois de comprar.</p>
+    <div class="stats" style="margin-top:36px">
       <div class="stat rv d1"><b data-count="12">12</b><span>calls, 1 por semana</span></div>
       <div class="stat rv d2"><b>3 meses</b><span>de acompanhamento</span></div>
       <div class="stat dark rv d3"><b>R$<span data-count="997">997</span></b><span>ou 12x no cartão</span></div>
@@ -466,7 +651,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
 <!-- 08 FUNIL -->
 <section class="pad" style="background:var(--ink-2)">
   <div class="wrap">
-    <div class="eyebrow rv">07 · O funil inteiro</div>
+    <div class="eyebrow rv">11 · O funil inteiro</div>
     <h2 class="rv d1">Cada venda nos dá <em>três chances</em> de subir o ticket</h2>
     <p class="lead rv d2">O anúncio leva para a VSL e a VSL leva para o checkout. Dali até a área de membros, a compradora passa por três ofertas.</p>
     <div class="funnel" id="funnel">
@@ -506,8 +691,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
 <!-- 09 TICKET -->
 <section class="light pad">
   <div class="wrap">
-    <div class="eyebrow rv">08 · A conta que eu fiz</div>
+    <div class="eyebrow rv">12 · A conta que eu fiz</div>
     <h2 class="rv d1">Com esse funil, cada compradora vale <em>R$416</em>, e não R$297</h2>
+    <p class="lead rv d2">Fiz a conta para mostrar o efeito dos bumps e do upsell em cada venda. Esse aumento é o que permite pagar mais caro pelo anúncio e continuar crescendo, mesmo quando o custo de tráfego subir.</p>
     <div class="ticket">
       <div class="big rv d1">
         <div class="n gold-text">+<span data-count="40">40</span>%</div>
@@ -527,15 +713,16 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
         </table>
       </div>
     </div>
-    <p class="note rv">As taxas de adesão são estimativas minhas com base no mercado, ainda não são dados seus. Os valores são brutos, antes das taxas da Nasten. Troco pelos números reais assim que a campanha de teste rodar.</p>
+    <p class="note rv">As taxas de adesão são estimativas minhas com base no mercado, ainda não são dados seus. Os valores são brutos, antes das taxas da Nasten. Com a campanha rodando, eles dão lugar aos números reais.</p>
   </div>
 </section>
 
-<!-- 10 TRÁFEGO -->
-<section class="pad">
+<!-- 12 TRÁFEGO -->
+<section class="pad" style="background:var(--ink-2)">
   <div class="wrap">
-    <div class="eyebrow rv">09 · Como eu vou rodar o Meta Ads</div>
+    <div class="eyebrow rv">13 · Como eu rodaria o Meta Ads</div>
     <h2 class="rv d1">Campanha perpétua, otimizada para <em>compra</em></h2>
+    <p class="lead rv d2">Mantive a campanha simples de propósito. Primeiro eu garanto que cada venda é medida, depois testo os criativos e só então escalo o que provou que vende.</p>
     <div class="traffic">
       <div>
         <div class="phase rv"><small>Fase 1</small><h3>Rastreamento</h3><p>Primeiro instalo o Pixel e a API de Conversões na página e no checkout. Não coloco verba antes disso.</p></div>
@@ -558,29 +745,14 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
         <p class="metrics-note">Os criativos são você falando para a câmera. Na copy eu não cito atributos pessoais de quem assiste, para não esbarrar na política do Meta.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- 11 PRÓXIMOS PASSOS -->
-<section class="light pad">
-  <div class="wrap">
-    <div class="eyebrow rv">10 · Cronograma</div>
-    <h2 class="rv d1">Com a sua aprovação, o funil entra no ar em <em>3 semanas</em></h2>
-    <div class="weeks">
-      <div class="week rv d1"><small>SEMANA 1</small><p>Fechamos a oferta, eu escrevo o roteiro da VSL e configuro o rastreamento e o checkout</p><div class="w">1</div></div>
-      <div class="week rv d2"><small>SEMANA 2</small><p>Você grava a VSL, os bumps e o vídeo da mentoria</p><div class="w">2</div></div>
-      <div class="week dark rv d3"><small>SEMANA 3</small><p>Eu entrego os criativos e coloco a campanha de teste no ar</p><div class="w">3</div></div>
-      <div class="needs rv d4">
-        <h3>O que eu preciso de você</h3>
-        <ul class="checks">
-          <li>A aprovação da oferta, dos bumps e da mentoria</li>
-          <li>A gravação da VSL, dos bumps e do vídeo do upsell</li>
-          <li>De 5 a 10 depoimentos com autorização das alunas</li>
-          <li>Acesso à Nasten, à BM e ao Instagram</li>
-          <li>Os dias e horários em que você quer fazer as calls</li>
-        </ul>
-      </div>
-    </div>
+  <h3 class="sub-h rv">Os 5 primeiros ganchos que eu <em>testaria</em></h3>
+    <ul class="wants">
+      <li class="rv">"3 sinais que um homem dá já no primeiro encontro e quase toda mulher ignora"</li>
+      <li class="rv d1">"A frase que manipuladores usam nas primeiras semanas"</li>
+      <li class="rv">"Por que tantas mulheres se envolvem sempre com o mesmo tipo de homem"</li>
+      <li class="rv d1">"O que eu observo num encontro depois de anos na segurança pública"</li>
+      <li class="rv">"Lente Limpa: o teste para fazer antes do segundo encontro"</li>
+    </ul>
   </div>
 </section>
 
@@ -592,12 +764,12 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:28px
       <span class="line-mask rv"><span class="gold-text">se encontrem.</span></span>
     </h2>
     <div class="rule rv d2"></div>
-    <p class="rv d3">Se fizer sentido para você, o próximo passo é aprovar a proposta e marcarmos a gravação da VSL.</p>
+    <p class="rv d3">Esse é o produto que eu enxergo no seu método: uma mulher que para de correr atrás e passa a enxergar antes de se envolver, e um funil que leva essa ideia até ela todos os dias.</p>
   </div>
   <div class="close-media"><img src="img/hero.jpg" alt="Fernando Diniz" data-par="0.06"></div>
 </section>
 
-<footer><span>Felipe Cavalcanti · Mega Social Media · Outubro 2026</span><span>Proposta preparada para Fernando Diniz</span></footer>
+<footer><span>Felipe Cavalcanti · Mega Social Media · Outubro 2026</span><span>Preparado para Fernando Diniz</span></footer>
 
 <script>
 (function(){
